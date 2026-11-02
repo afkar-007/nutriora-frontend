@@ -165,6 +165,7 @@ function DietPlans() {
     await changeHasDietPlans();
 
     setShowConfirm(false);
+    await fetchDietPlans()
 
     // alert(data.message);
 
