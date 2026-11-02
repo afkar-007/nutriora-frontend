@@ -61,8 +61,9 @@ function AdminDashboard() {
   useEffect(() => {
     async function Loader() {
       
-      await adminGateway()
+      
       await GetUsers()
+      await adminGateway()
       
       
 
