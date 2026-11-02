@@ -1,10 +1,36 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Styles/ClientAbout.css"
 
 function ClientAbout() {
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    async function Loader(params) {
+      await returnedToHome()
+    }
+    Loader()
+    
+
+  },[])
+
+
+        async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
+
+
 
   return (
     <div className="client-about-page">

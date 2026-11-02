@@ -11,8 +11,30 @@ function ClientNutritionGoals() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchNutritionGoals();
+    async function Loader() {
+      await fetchNutritionGoals();
+      await returnedToHome()
+      
+    }
+    Loader()
   }, []);
+
+
+     async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
+
+
 
   async function fetchNutritionGoals() {
     try {

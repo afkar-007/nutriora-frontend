@@ -1,6 +1,7 @@
 import '../AdminStyles/ClientBodyMeasurementPage.css'
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+import LoadingGif from "../assets/LoadingNutoria.gif";
 
 function ClientBodyMeasurementPage() {
   const { id } = useParams();
@@ -36,14 +37,19 @@ function ClientBodyMeasurementPage() {
     Loader()
   }, [id]);
 
-  if (loading) {
-    return (
-      <div className="client-body-loading">
-        <div className="client-body-spinner"></div>
-        <p>Loading body measurements...</p>
-      </div>
-    );
-  }
+   if (loading) {
+     return (
+       <div className="client-profile-status">
+         <img
+           src={LoadingGif}
+           alt="Loading..."
+           className="profile-loading-gif"
+         />
+ 
+         <p>Your wellness journey is loading...</p>
+       </div>
+     );
+   }
 
     function adminGateway() {
   const adminGate = localStorage.getItem("AdminLogin");

@@ -313,6 +313,7 @@
   background: #f7f8f3;
   text-align: center;
   animation: nutritionProfileAppear 0.4s ease both;
+  min-height: 100vh;
 }
 
 .nutrition-profile-status > i {

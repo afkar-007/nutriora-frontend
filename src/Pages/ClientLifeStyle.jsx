@@ -11,8 +11,27 @@ function ClientLifestyle() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchLifestyleDetails();
+    async function Loader() {
+      await fetchLifestyleDetails();
+      await returnedToHome()
+      
+    }
+    Loader()
   }, []);
+
+   async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
 
   async function fetchLifestyleDetails() {
     try {

@@ -2,6 +2,8 @@ import '../AdminStyles/ClientFoodHabitsPage.css'
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
+import LoadingGif from "../assets/LoadingNutoria.gif";
+
 function ClientFoodHabitsPage() {
   const { id } = useParams();
 
@@ -51,14 +53,19 @@ function ClientFoodHabitsPage() {
 
 
 
-  if (loading) {
-    return (
-      <div className="client-food-loading">
-        <div className="client-food-spinner"></div>
-        <p>Loading food preferences...</p>
-      </div>
-    );
-  }
+   if (loading) {
+     return (
+       <div className="client-profile-status">
+         <img
+           src={LoadingGif}
+           alt="Loading..."
+           className="profile-loading-gif"
+         />
+ 
+         <p>Your wellness journey is loading...</p>
+       </div>
+     );
+   }
 
   if (!details) {
     return (

@@ -14,11 +14,31 @@ function ClientBodyMeasurements() {
   useEffect(() => {
     async function Loader() {
       await fetchBodyMeasurements();
+      returnedToHome()
       await checkbodytype()
     }
     Loader()
     
   }, []);
+
+      async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
+
+
+
+
+
 
   async function fetchBodyMeasurements() {
     try {

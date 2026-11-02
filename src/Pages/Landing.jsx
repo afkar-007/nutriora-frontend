@@ -66,10 +66,10 @@ function Landing() {
   }
 
   // Nutritionist login
-  // if (adminGateway === "true") {
-  //   navigate("/nutritionist", { replace: true });
-  //   return;
-  // }
+  if (adminGateway === "true") {
+    navigate("/nutritionist", { replace: true });
+    return;
+  }
 
   // Not logged in
   navigate("/", { replace: true });

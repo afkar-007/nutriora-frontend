@@ -163,6 +163,7 @@
 
 .body-profile-status {
   display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -172,6 +173,7 @@
   background: #fffef9;
   border: 1px solid #e5e9df;
   border-radius: 22px;
+  min-height: 100vh;
 }
 
 .profile-loading-gif {

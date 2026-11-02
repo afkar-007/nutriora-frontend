@@ -14,8 +14,29 @@ function Nutrition() {
   const [updateLoading, setUpdateLoading] = useState(false);
 
   useEffect(() => {
-    getDietPlan();
+    async function Loader() {
+      await getDietPlan();
+      await returnedToHome()
+      
+    }
+    Loader()
   }, []);
+
+   async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
+
+
 
   async function getDietPlan() {
     try {

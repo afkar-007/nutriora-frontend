@@ -329,6 +329,7 @@
   background: #f7f8f3;
   text-align: center;
   animation: lifestyleProfileAppear 0.4s ease both;
+  min-height: 100vh;
 }
 
 .lifestyle-profile-status > i {
@@ -495,6 +496,7 @@
   .lifestyle-section-title {
     gap: 9px;
     font-size: 15px;
+    
   }
 
   .lifestyle-section-title i {

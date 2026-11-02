@@ -60,7 +60,7 @@ function DietPlans() {
   useEffect(() => {
     fetchDietPlans();
     console.log(userId);
-  }, [userId]);
+  }, []);
 
   const filteredPlans = useMemo(() => {
     return plans.filter((plan) => {
@@ -131,54 +131,50 @@ function DietPlans() {
     return "Draft";
   }
 
-  async function handleDelete(deletingId) {
-    // const confirmed = window.confirm(
-    //   "Are you sure you want to delete this diet plan?"
-    // );
+  async function handleDelete(planId) {
+  try {
+    setDeleteLoading(true);
 
-    // if (!confirmed) return;
+    const token = localStorage.getItem("token");
 
-    try {
-      setDeleteLoading(true);
-
-      const token = localStorage.getItem("token");
-
-      const response = await fetch(
-        `https://nutriora-backend.onrender.com/dietPlan/DeleteClientPlan/${deletingId}`,
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
+    const response = await fetch(
+      `https://nutriora-backend.onrender.com/dietPlan/DeleteClientPlan/${planId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
         },
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Unable to delete diet plan") 
-        
       }
-      if (response.ok) {
-        console.log("deleting");
-        fetchDietPlans();
-        changeHasDietPlans()
-        
-        
-        setShowConfirm(false);
-      }
+    );
 
-      // setPlans((previousPlans) =>
-      //   previousPlans.filter((plan) => plan._id !== planId)
-      // );
-    } catch (err) {
-      window.alert(err.message || "Failed to delete diet plan");
-    } finally {
-      setDeletingId(null);
-      setDeleteLoading(false);
+    const data = await response.json();
+
+    console.log("Delete response:", data);
+
+    if (!response.ok) {
+      throw new Error(data.message || "Unable to delete diet plan");
     }
+
+    // Immediately remove the deleted plan from UI
+    setPlans((previousPlans) =>
+      previousPlans.filter((plan) => plan._id !== planId)
+    );
+
+    // Update client only if this was their last diet plan
+    await changeHasDietPlans();
+
+    setShowConfirm(false);
+
+    alert(data.message);
+
+  } catch (err) {
+    alert(err.message || "Failed to delete diet plan");
+  } finally {
+    setDeletingId(null);
+    setDeleteLoading(false);
   }
+}
 
   async function changeHasDietPlans() {
     try {
@@ -229,36 +225,36 @@ function DietPlans() {
   }
 
 
-  async function AssignDietPlan() {
+  // async function AssignDietPlan() {
    
-      const data = {
-        hasDietPlans: false,
-      };
+  //     const data = {
+  //       hasDietPlans: false,
+  //     };
 
-      const response = await fetch(`https://nutriora-backend.onrender.com/user/ChangeDietPlan/${clientId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  //     const response = await fetch(`https://nutriora-backend.onrender.com/user/ChangeDietPlan/${clientId}`, {
+  //       method: "PUT",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(data),
+  //     });
 
-      const getData = await response.json();
+  //     const getData = await response.json();
 
-      if(!response.ok){
-        console.log(getData.message);
-        return
+  //     if(!response.ok){
+  //       console.log(getData.message);
+  //       return
         
-      }
-      if(response.ok){
-        console.log(getData.message);
+  //     }
+  //     if(response.ok){
+  //       console.log(getData.message);
         
-      }
+  //     }
 
 
 
     
-  }
+  // }
 
 
 

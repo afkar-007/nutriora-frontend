@@ -16,8 +16,28 @@ function Workout() {
   console.log(id);
 
   useEffect(() => {
-    getHealthPlan();
+
+    async function Loader() {
+      await getHealthPlan();
+      await returnedToHome()
+    }
+    Loader()
   }, []);
+
+   async function returnedToHome() {
+
+     const login = localStorage.getItem("homePage");
+    if (login !== "true") {
+      navigate("/", { replace: true });
+      console.log("not allowed");
+
+      return;
+    }
+    console.log(login);
+
+    
+  }
+
 
   async function getHealthPlan() {
     try {

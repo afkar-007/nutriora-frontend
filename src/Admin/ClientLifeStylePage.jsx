@@ -256,6 +256,12 @@ function ClientLifestylePage() {
               "No additional notes provided."}
           </p>
         </div>
+        <div className="lifestyle-profile-divider"></div>
+
+        <h3 className="lifestyle-section-title">
+          <i className="bi bi-journal-text"></i>
+          Eating Routine
+        </h3>
         <div className="lifestyle-notes">
           <p>
             {details.eatingRoutine ||
