@@ -163,8 +163,8 @@ function Lifestyle() {
         return;
       }
 
-      if(formData.medications===""){
-        return setError("Please Enter medications or supplements")
+      if(formData.eatingRoutine===""){
+        return setError("Please Enter Eating Routine")
       }
 
       console.log("Lifestyle & Health Background:", formData);
@@ -184,6 +184,7 @@ function Lifestyle() {
         digestiveIssues: formData.digestiveIssues,
         smokingAlcohol: formData.smokingAlcohol,
         additionalNotes: formData.additionalNotes,
+        eatingRoutine:formData.eatingRoutine
       };
 
       console.log(data);

@@ -362,6 +362,9 @@
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
+.auth-submit:disabled{
+  cursor: wait;
+}
 
 .auth-submit span {
   font-size: 19px;

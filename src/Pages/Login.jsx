@@ -11,6 +11,7 @@ function Login() {
   const [error, setError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
   const emailPattern = /^[^\s@]+@gmail\.com$/;
+  const [loading,setLoading]=useState(false)
 
 
 
@@ -64,7 +65,7 @@ function Login() {
   async function Login(e) {
     try {
       
-      
+      setLoading(true)
       
       e.preventDefault();
 
@@ -143,6 +144,9 @@ function Login() {
 
     } catch (err) {
       console.log(err.message);
+    }
+    finally{
+      setLoading(false)
     }
   }
 
@@ -248,8 +252,9 @@ function Login() {
               type="submit"
               className="auth-submit"
               onClick={(e) => Login(e)}
+              disabled={loading}
             >
-              Sign in
+              {loading?"Logining..." :"Sign in"}
               <span aria-hidden="true">→</span>
             </button>
           </form>

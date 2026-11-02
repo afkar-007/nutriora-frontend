@@ -296,7 +296,7 @@
 
 .personal-continue:disabled {
   opacity: 0.65;
-  cursor: not-allowed;
+  cursor: wait;
 }
 
 .personal-continue i {
