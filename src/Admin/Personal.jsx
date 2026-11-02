@@ -2,7 +2,7 @@ import React from "react";
 import "../AdminStyles/Personal.css";
 import black from "../assets/snap.jpeg";
 import color from "../assets/color.jpeg";
-// import video from "../assets/video.mp4";
+import video from "../assets/video.mp4";
 import { Navigate, useNavigate } from "react-router-dom";
 
 function Personal() {
@@ -157,8 +157,8 @@ function Personal() {
         <h3>Made with memories.</h3>
       </section>
 
-      {/* Final Memories Video */}
-      {/* <section className="personal-video-section">
+      Final Memories Video
+      <section className="personal-video-section">
         <span>05 — OUR LITTLE MEMORIES</span>
 
         <h2>
@@ -175,9 +175,9 @@ function Personal() {
         </div>
 
         <p>Some memories are too special to be forgotten.</p>
-      </section> */}
+      </section>
 
-      {/* Footer */}
+      Footer
       <footer className="personal-footer">
         <p>OUR MEMORIES © 2026</p>
         <p>A LITTLE CORNER OF HAPPINESS.</p>
