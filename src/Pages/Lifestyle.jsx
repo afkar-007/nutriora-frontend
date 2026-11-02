@@ -140,7 +140,7 @@ function Lifestyle() {
     }
 
     if (response.ok) {
-      // alert(getData.message);
+      alert(getData.message);
     }
   }
 
@@ -201,7 +201,7 @@ function Lifestyle() {
 
         //  alert(response.message);
         localStorage.setItem("ClientHome", true);
-        navigate("/clientHome");
+        // navigate("/clientHome");
       }
     } catch (err) {
       console.log(err.message);
