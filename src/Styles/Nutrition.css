@@ -1,0 +1,838 @@
+
+.client-home-page {
+  min-height: 100vh;
+  padding: 45px 7%;
+  background: #f7f8f2;
+  color: #26372e;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+
+.nutrition-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+
+  background: #ffffff;
+  color: #526d53;
+
+  border: 1px solid #dce6d8;
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.nutrition-back-btn i {
+  font-size: 17px;
+  transition: transform 0.25s ease;
+}
+
+.nutrition-back-btn:hover {
+  background: #58785a;
+  color: #ffffff;
+  border-color: #58785a;
+  box-shadow: 0 6px 18px rgba(70, 103, 73, 0.16);
+}
+
+.nutrition-back-btn:hover i {
+  transform: translateX(-4px);
+}
+
+.nutrition-back-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+  .nutrition-back-btn {
+    padding: 10px 16px;
+    margin-bottom: 20px;
+    font-size: 13px;
+  }
+}
+
+
+.client-home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 45px;
+  margin-bottom: 35px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #e7efe3, #f0f2e8);
+  border: 1px solid #dce5d8;
+}
+
+.client-home-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #6b866c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.client-home-header h1 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+}
+
+.client-home-header h1 span {
+  color: #789477;
+}
+
+.client-home-header p {
+  max-width: 450px;
+  margin-top: 18px;
+  color: #758078;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.client-home-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 115px;
+  height: 115px;
+  border-radius: 35px;
+  background: #d7e5d2;
+  color: #547555;
+  font-size: 46px;
+  transform: rotate(5deg);
+}
+
+/* ================================
+   LOADING
+================================ */
+
+.client-home-page > h3 {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #58745b;
+  font-size: 20px;
+}
+
+/* ================================
+   EMPTY STATE
+================================ */
+
+.client-home-empty {
+  padding: 65px 25px;
+  text-align: center;
+  border-radius: 24px;
+  border: 1px solid #e2e8dd;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(39, 61, 43, 0.04);
+  min-height: 100vh;
+}
+
+.client-home-empty > i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 22px;
+  border-radius: 24px;
+  background: #eaf1e6;
+  color: #6f8d6e;
+  font-size: 32px;
+}
+
+.client-home-empty h2 {
+  margin-bottom: 12px;
+  color: #293b30;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.client-home-empty p {
+  max-width: 440px;
+  margin: 0 auto;
+  color: #828b81;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ================================
+   DIET PLAN CARD
+================================ */
+
+.client-home-plan {
+  overflow: hidden;
+  border: 1px solid #e1e7dd;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 0 15px 45px rgba(39, 61, 43, 0.055);
+  animation: clientPlanAppear 0.5s ease;
+}
+
+@keyframes clientPlanAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   PLAN HEADER
+================================ */
+
+.client-home-plan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 35px;
+  background: linear-gradient(120deg, #edf3e9, #f8f8f2);
+  border-bottom: 1px solid #e5ebdf;
+}
+
+.client-home-plan-tag {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 8px 12px;
+  border-radius: 30px;
+  background: #dce9d7;
+  color: #5d7b5d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.client-home-plan-header h2 {
+  margin: 0;
+  color: #293b30;
+  font-size: clamp(23px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  overflow-wrap: anywhere;
+}
+
+.client-home-plan-header p {
+  margin: 12px 0 0;
+  color: #7c877c;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.client-home-plan-header > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: 22px;
+  background: #dce9d7;
+  color: #5d7b5d;
+  font-size: 30px;
+}
+
+/* ================================
+   PLAN DATES
+================================ */
+
+.client-home-plan-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 25px 35px;
+  border-bottom: 1px solid #edf0e9;
+}
+
+.client-home-plan-info > div {
+  padding: 19px;
+  border: 1px solid #e7ece3;
+  border-radius: 16px;
+  background: #fbfcf9;
+}
+
+.client-home-plan-info span {
+  display: block;
+  margin-bottom: 9px;
+  color: #8a9688;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.client-home-plan-info p {
+  margin: 0;
+  color: #34483a;
+  font-size: 15px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   MEAL PLAN SECTION
+================================ */
+
+.client-home-meal-section {
+  padding: 35px;
+}
+
+.client-home-meal-section > h3 {
+  margin: 0 0 24px;
+  color: #2b3d31;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ================================
+   DAY TABS
+================================ */
+
+.client-home-day-tabs {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.client-home-day-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 76px;
+  border: 1px solid #e4e9df;
+  border-radius: 15px;
+  background: #fafbf8;
+  color: #687769;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.client-home-day-tab span {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.client-home-day-tab strong {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.client-home-day-tab:hover {
+  border-color: #9bb69a;
+  background: #eff4eb;
+  transform: translateY(-2px);
+}
+
+.client-home-day-tab.active {
+  border-color: #58785a;
+  background: #58785a;
+  color: #ffffff;
+  box-shadow: 0 7px 18px rgba(70, 103, 73, 0.18);
+}
+
+/* ================================
+   MEAL LIST
+================================ */
+
+.client-home-meal-list {
+  padding: 25px;
+  border: 1px solid #e6ebe2;
+  border-radius: 20px;
+  background: #fbfcf9;
+}
+
+.client-home-meal-list h4 {
+  margin: 0 0 22px;
+  color: #34483a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+/* Individual meal */
+
+.client-home-meal-item {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 18px;
+  margin-bottom: 12px;
+  border: 1px solid #e9ede5;
+  border-radius: 15px;
+  background: #ffffff;
+  transition: border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.client-home-meal-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.client-home-meal-item:hover {
+  border-color: #b7cbb0;
+  box-shadow: 0 6px 20px rgba(40, 65, 43, 0.045);
+  transform: translateX(3px);
+}
+
+.client-home-meal-item > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #e9f0e4;
+  color: #658265;
+  font-size: 21px;
+}
+
+.client-home-meal-item > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.client-home-meal-item span {
+  display: block;
+  margin-bottom: 7px;
+  color: #8a9688;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.client-home-meal-item p {
+  margin: 0;
+  color: #37483b;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* ================================
+   DAY NAVIGATION
+================================ */
+
+.client-home-day-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 22px;
+  border-top: 1px solid #e8ede3;
+}
+
+.client-home-day-navigation button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 43px;
+  padding: 0 17px;
+  border: 1px solid #dce5d7;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #526d53;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.client-home-day-navigation button:hover:not(:disabled) {
+  border-color: #58785a;
+  background: #58785a;
+  color: #ffffff;
+}
+
+.client-home-day-navigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.client-home-day-navigation span {
+  color: #7d897d;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ================================
+   PLAN FOOTER
+================================ */
+
+.client-home-plan-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 35px;
+  border-top: 1px solid #e8ede3;
+  background: #f8faf5;
+}
+
+.client-home-plan-footer i {
+  flex-shrink: 0;
+  color: #789578;
+  font-size: 19px;
+}
+
+.client-home-plan-footer p {
+  margin: 0;
+  color: #7b887b;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.complete-btn {
+  padding: 11px 24px;
+  background: linear-gradient(135deg, #557c63, #365b46);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(54, 91, 70, 0.18);
+   margin-left: 2rem;
+   margin-bottom: 1rem;
+}
+
+.complete-btn:hover {
+  background: linear-gradient(135deg, #426b50, #294b38);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(54, 91, 70, 0.25);
+}
+
+.complete-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(54, 91, 70, 0.2);
+}
+
+.complete-btn:disabled {
+  background: #a5b8aa;
+  color: #f5f5f5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+ 
+}
+
+.complete-btn {
+  padding: 10px 22px;
+  background: #466b54;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.complete-btn:hover {
+  background: #34563f;
+}
+
+/* Overlay */
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 28, 22, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* Modal */
+
+.confirm-modal {
+  width: 100%;
+  max-width: 390px;
+  background: #fff;
+  padding: 32px 28px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  animation: modalShow 0.25s ease;
+}
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Icon */
+
+.confirm-icon {
+  width: 62px;
+  height: 62px;
+  background: #e9f4ec;
+  color: #477b55;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin: 0 auto 20px;
+}
+
+/* Text */
+
+.confirm-modal h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #263b2d;
+  margin-bottom: 10px;
+}
+
+.confirm-modal p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #7b857e;
+  margin-bottom: 26px;
+}
+
+/* Actions */
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.confirm-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.cancel-btn {
+  background: #f3f5f3;
+  color: #58635b;
+  border: 1px solid #e5e9e5;
+}
+
+.cancel-btn:hover {
+  background: #e8ece8;
+}
+
+.confirm-btn {
+  background: #477653;
+  color: white;
+  border: 1px solid #477653;
+}
+
+.confirm-btn:hover {
+  background: #345b40;
+  border-color: #345b40;
+}
+
+.confirm-btn i {
+  margin-right: 6px;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+  .client-home-page {
+    padding: 30px 4%;
+  }
+
+  .client-home-header {
+    padding: 32px;
+  }
+
+  .client-home-meal-section {
+    padding: 25px;
+  }
+
+  .client-home-day-tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .client-home-plan-info {
+    padding: 22px 25px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .client-home-page {
+    padding: 20px 14px;
+  }
+
+  .client-home-header {
+    padding: 25px 21px;
+    border-radius: 22px;
+  }
+
+  .client-home-header h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .client-home-header p {
+    font-size: 13px;
+  }
+
+  .client-home-header-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 17px;
+    font-size: 24px;
+  }
+
+  .client-home-plan {
+    border-radius: 20px;
+  }
+
+  .client-home-plan-header {
+    padding: 25px 20px;
+  }
+
+  .client-home-plan-header > i {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    font-size: 23px;
+  }
+
+  .client-home-plan-info {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .client-home-plan-info > div {
+    padding: 13px;
+  }
+
+  .client-home-plan-info p {
+    font-size: 12px;
+  }
+
+  .client-home-meal-section {
+    padding: 23px 18px;
+  }
+
+  .client-home-meal-list {
+    padding: 15px;
+  }
+
+  .client-home-day-tabs {
+    gap: 8px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .client-home-day-tab {
+    min-height: 65px;
+    border-radius: 12px;
+  }
+
+  .client-home-meal-item {
+    gap: 12px;
+    padding: 13px 11px;
+  }
+
+  .client-home-meal-item > i {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 18px;
+  }
+
+  .client-home-meal-item p {
+    font-size: 13px;
+  }
+
+  .client-home-day-navigation {
+    flex-wrap: wrap;
+  }
+
+  .client-home-day-navigation button {
+    padding: 0 11px;
+    font-size: 11px;
+  }
+
+  .client-home-plan-footer {
+    align-items: flex-start;
+    padding: 20px;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 360px) {
+  .client-home-header {
+    padding: 20px 15px;
+  }
+
+  .client-home-header h1 {
+    font-size: 27px;
+  }
+
+  .client-home-header-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 19px;
+  }
+
+  .client-home-plan-info {
+    grid-template-columns: 1fr;
+  }
+
+  .client-home-day-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .client-home-day-navigation button {
+    min-height: 38px;
+    padding: 0 8px;
+  }
+}

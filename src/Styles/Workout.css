@@ -1,0 +1,439 @@
+.client-health-container {
+  width: 100%;
+  padding: 30px;
+  background: #f7f9f5;
+  min-height: 100vh;
+  color: #29392e;
+}
+
+/* Header */
+
+.client-health-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.client-health-header span:first-child {
+  color: #789477;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.client-health-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #29392e;
+}
+
+.client-health-header p {
+  color: #89958a;
+  font-size: 14px;
+  margin: 0;
+}
+
+.health-status {
+  padding: 9px 17px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.health-status.active {
+  background: #e5f2e5;
+  color: #4d8054;
+}
+
+.health-status.completed {
+  background: #e2f0ed;
+  color: #36806c;
+}
+
+.health-status.paused {
+  background: #fff1dd;
+  color: #b47a29;
+}
+
+/* Overview */
+
+.health-overview-card {
+  background: #ffffff;
+  border: 1px solid #e8eee6;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(48, 74, 51, 0.035);
+}
+
+.health-overview-card h3,
+.health-detail-card h3,
+.health-exercise-section > h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #344b38;
+  margin-bottom: 18px;
+}
+
+.health-overview-card h3 i,
+.health-detail-card h3 i,
+.health-exercise-section > h3 i {
+  color: #729676;
+  margin-right: 10px;
+}
+
+.health-overview-card p {
+  color: #78847a;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Fruits and Vegetables */
+
+.health-food-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.health-detail-card {
+  background: #ffffff;
+  border: 1px solid #e8eee6;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(48, 74, 51, 0.035);
+}
+
+.health-detail-card p {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #758177;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 13px 0;
+}
+
+.health-detail-card p i {
+  color: #78a17a;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+/* Guidelines */
+
+.health-guidelines {
+  margin-bottom: 22px;
+}
+
+/* Exercise */
+
+.health-exercise-section {
+  background: #ffffff;
+  border: 1px solid #e8eee6;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(48, 74, 51, 0.035);
+}
+
+.health-exercise-section > h3 {
+  margin-bottom: 22px;
+}
+
+.health-exercise-card {
+  border: 1px solid #e9eee7;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  background: #fbfcfa;
+}
+
+.health-exercise-card:last-child {
+  margin-bottom: 0;
+}
+
+.health-exercise-card h4 {
+  color: #4d7453;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.health-workout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 13px 0;
+  border-top: 1px solid #edf0eb;
+}
+
+.health-workout h5 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3e5142;
+  margin-bottom: 6px;
+}
+
+.health-workout span {
+  font-size: 12px;
+  color: #929d93;
+}
+
+.workout-duration {
+  white-space: nowrap;
+}
+
+.workout-duration i {
+  margin-right: 6px;
+  color: #7b9d7d;
+}
+
+/* Complete Button */
+
+.health-complete-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0 25px;
+}
+
+.health-complete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 9px;
+  background: #587e5e;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.health-complete-btn:hover {
+  background: #426849;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(66, 104, 73, 0.18);
+}
+
+.health-complete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.health-complete-btn i {
+  font-size: 16px;
+}
+
+.health-completed-message {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #43805b;
+  font-size: 14px;
+  font-weight: 600;
+  background: #e8f3e9;
+  padding: 13px 20px;
+  border-radius: 9px;
+}
+
+/* No Health Plan */
+
+.no-health-plan {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.no-health-plan > i {
+  font-size: 42px;
+  color: #79a17d;
+  margin-bottom: 18px;
+}
+
+.no-health-plan h3 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #344b38;
+}
+
+.no-health-plan p {
+  color: #8a958b;
+  font-size: 14px;
+}
+
+.health-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 35, 28, 0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.health-confirm-box {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  animation: healthPopup 0.25s ease;
+}
+
+.health-confirm-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  background: #e8f3e9;
+  color: #56815e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.health-confirm-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #344b38;
+  margin-bottom: 10px;
+}
+
+.health-confirm-box p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #879187;
+  margin-bottom: 25px;
+}
+
+.health-confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.health-cancel-btn,
+.health-confirm-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.health-cancel-btn {
+  background: #f3f5f2;
+  color: #526455;
+  border: 1px solid #e2e8e0;
+}
+
+.health-cancel-btn:hover {
+  background: #e8eee6;
+}
+
+.health-confirm-btn {
+  background: #587e5e;
+  color: white;
+  border: 1px solid #587e5e;
+}
+
+.health-confirm-btn:hover {
+  background: #426849;
+}
+
+.health-confirm-btn:disabled,
+.health-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@keyframes healthPopup {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .health-confirm-box {
+    padding: 25px 20px;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .client-health-container {
+    padding: 20px 15px;
+  }
+
+  .client-health-header {
+    align-items: flex-start;
+  }
+
+  .client-health-header h2 {
+    font-size: 23px;
+  }
+
+  .health-food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-overview-card,
+  .health-detail-card,
+  .health-exercise-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-health-header {
+    flex-direction: column;
+  }
+
+  .health-status {
+    align-self: flex-start;
+  }
+
+  .health-workout {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .health-complete-section {
+    justify-content: stretch;
+  }
+
+  .health-complete-btn {
+    width: 100%;
+  }
+}

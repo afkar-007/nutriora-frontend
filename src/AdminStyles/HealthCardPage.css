@@ -1,0 +1,527 @@
+.health-plans-page {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f7f9f6;
+  color: #263b30;
+}
+
+/* Header */
+
+.health-plans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  gap: 20px;
+}
+
+.health-plans-subtitle {
+  color: #829a83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.health-plans-header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #263b30;
+  margin-bottom: 7px;
+}
+
+.health-plans-description {
+  color: #89958b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.health-plans-count {
+  background: white;
+  padding: 15px 25px;
+  border: 1px solid #e7ede6;
+  border-radius: 14px;
+  min-width: 125px;
+}
+
+.health-plans-count span {
+  font-size: 12px;
+  color: #89958b;
+}
+
+.health-plans-count h3 {
+  font-size: 27px;
+  color: #567c5c;
+  margin: 5px 0 0;
+  font-weight: 700;
+}
+
+/* Grid */
+
+.health-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Card */
+
+.health-plan-card {
+  background: #ffffff;
+  border: 1px solid #e8eee7;
+  border-radius: 18px;
+  padding: 23px;
+  transition: 0.3s ease;
+  min-width: 0;
+}
+
+.health-plan-card:hover {
+  transform: translateY(-4px);
+  border-color: #c5d8c5;
+  box-shadow: 0 12px 30px rgba(47, 77, 51, 0.07);
+}
+
+.health-plan-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.health-plan-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+  background: #eaf2e9;
+  color: #5b8060;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.health-plan-delete {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #f0e4e2;
+  background: #fffafa;
+  color: #c46d68;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.health-plan-delete:hover {
+  background: #c46d68;
+  color: white;
+}
+
+.health-plan-delete:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Overview */
+
+.health-plan-overview span {
+  color: #8a9b89;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.health-plan-overview h3 {
+  color: #293e30;
+  font-size: 19px;
+  font-weight: 650;
+  margin-top: 9px;
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
+.health-plan-divider {
+  height: 1px;
+  background: #edf0eb;
+  margin: 22px 0;
+}
+
+/* Details */
+
+.health-plan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.health-plan-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.health-plan-detail-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.fruit-icon {
+  background: #fff0e8;
+  color: #dc9165;
+}
+
+.vegetable-icon {
+  background: #eaf4e9;
+  color: #6c986e;
+}
+
+.guideline-icon {
+  background: #f1edfa;
+  color: #9380b9;
+}
+
+.exercise-icon {
+  background: #e9f1f8;
+  color: #6992b6;
+}
+
+.health-plan-detail h4 {
+  color: #34483a;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 1px 0 5px;
+}
+
+.health-plan-detail p {
+  color: #849087;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Footer */
+
+.health-plan-footer {
+  border-top: 1px solid #edf0eb;
+  margin-top: 22px;
+  padding-top: 15px;
+}
+
+.health-plan-footer span {
+  font-size: 11px;
+  color: #9aa69b;
+}
+
+.health-plan-footer i {
+  margin-right: 7px;
+}
+
+/* Loading and Empty */
+
+.health-plans-message {
+  text-align: center;
+  padding: 80px 15px;
+  color: #829483;
+  font-size: 14px;
+}
+
+.health-plans-empty {
+  background: white;
+  border: 1px dashed #cbd9ca;
+  border-radius: 18px;
+  text-align: center;
+  padding: 75px 20px;
+}
+
+.health-plans-empty i {
+  font-size: 38px;
+  color: #86a68a;
+}
+
+.health-plans-empty h3 {
+  color: #354b39;
+  font-size: 19px;
+  margin-top: 18px;
+}
+
+.health-plans-empty p {
+  color: #929d93;
+  font-size: 13px;
+}
+
+.view-details-btn {
+  width: 100%;
+  padding: 11px 16px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  background: #eaf2e9;
+  color: #567c5c;
+  border: 1px solid #dce9db;
+  border-radius: 10px;
+
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-details-btn:hover {
+  background: #567c5c;
+  color: #ffffff;
+  border-color: #567c5c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 13px rgba(86, 124, 92, 0.15);
+}
+
+.view-details-btn i {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.view-details-btn:hover i {
+  transform: translateX(3px);
+}
+
+.view-details-btn:active {
+  transform: scale(0.98);
+}
+
+
+.client-health-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 9px 17px;
+  margin-bottom: 22px;
+
+  background: #ffffff;
+  color: #58785e;
+  border: 1px solid #dfe9dd;
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.client-health-back i {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.client-health-back:hover {
+  background: #567c5c;
+  color: #ffffff;
+  border-color: #567c5c;
+  box-shadow: 0 4px 12px rgba(86, 124, 92, 0.15);
+}
+
+.client-health-back:hover i {
+  transform: translateX(-3px);
+}
+
+.client-health-back:active {
+  transform: scale(0.97);
+}
+
+.ClientName{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+.health-confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 35, 28, 0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.health-confirm-box {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+  animation: healthPopup 0.25s ease;
+}
+
+.health-confirm-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  background: #fff0ed;
+  color: #d9534f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.health-confirm-box h3 {
+  font-size: 20px;
+  color: #26382b;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.health-confirm-box p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #7b857d;
+  margin-bottom: 25px;
+}
+
+.health-confirm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.health-cancel-btn,
+.health-confirm-delete-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.health-confirm-delete-btn:disabled{
+  cursor: wait;
+}
+
+.health-cancel-btn {
+  background: #f3f5f2;
+  color: #526455;
+  border: 1px solid #e2e8e0;
+}
+
+.health-cancel-btn:hover {
+  background: #e8eee6;
+}
+
+.health-confirm-delete-btn {
+  background: #d9534f;
+  color: white;
+  border: 1px solid #d9534f;
+}
+
+.health-confirm-delete-btn:hover {
+  background: #c63f3b;
+}
+.input-field {
+  width: 60%;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #26352c;
+  background: #ffffff;
+  border: 1px solid #dce5dd;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  margin-bottom: 1rem;
+}
+
+.input-field::placeholder {
+  color: #a2ada4;
+}
+
+.input-field:focus {
+  border-color: #789b7c;
+  box-shadow: 0 0 0 3px rgba(120, 155, 124, 0.13);
+}
+
+.Completed {
+  background-color: #36806c;
+  border-radius: 5px;
+  width: 5rem;
+  text-align: center;
+  color: white;
+}
+
+.active {
+  background-color:red ;
+  
+   border-radius: 5px;
+  width: 5rem;
+  text-align: center;
+}
+.statusDiv p{
+  color: white;
+}
+
+
+
+@keyframes healthPopup {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .health-confirm-box {
+    padding: 25px 20px;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .health-plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .health-plans-page {
+    padding: 18px;
+  }
+
+  .health-plans-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .health-plans-header h2 {
+    font-size: 25px;
+  }
+
+  .health-plans-count {
+    width: 100%;
+  }
+
+  .health-plan-card {
+    padding: 18px;
+  }
+}

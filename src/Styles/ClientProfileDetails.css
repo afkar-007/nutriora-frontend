@@ -1,0 +1,468 @@
+
+/* ================================
+   NUTRIORA CLIENT PROFILE
+================================ */
+
+.client-profile-page {
+  min-height: 100vh;
+  padding: 48px 7%;
+  background: #f7f7f0;
+  color: #26372d;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+
+.client-profile-header {
+  max-width: 1000px;
+  margin: 0 auto 35px;
+}
+
+.client-profile-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 35px;
+  padding: 10px 16px;
+  border: 1px solid #dce4d9;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #425849;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.client-profile-back:hover {
+  background: #e8eee4;
+  border-color: #a9bba5;
+  transform: translateX(-3px);
+}
+
+.client-profile-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #7b927a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.client-profile-header h1 {
+  margin: 0;
+  color: #26372d;
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 5vw, 52px);
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.client-profile-header > p {
+  margin-top: 12px;
+  color: #7d887e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Main Profile Card */
+
+.client-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 1000px;
+  margin: 0 auto 35px;
+  padding: 28px 32px;
+  border: 1px solid #e5e9df;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 40px rgba(42, 65, 44, 0.035);
+}
+
+.client-profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #e8eee3;
+  color: #637e60;
+  font-size: 32px;
+}
+
+.client-profile-identity {
+  flex: 1;
+  min-width: 0;
+}
+
+.client-profile-identity h2 {
+  margin: 0 0 8px;
+  color: #2d4033;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.client-profile-identity p {
+  margin: 0;
+  color: #8a9488;
+  font-size: 13px;
+}
+
+.client-profile-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 19px;
+  border: 1px solid #6f886b;
+  border-radius: 30px;
+  background: #6f886b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.client-profile-edit:hover {
+  background: #526c50;
+  border-color: #526c50;
+  box-shadow: 0 6px 18px rgba(65, 94, 63, 0.16);
+  transform: translateY(-2px);
+}
+
+/* Details Section */
+
+.client-profile-section {
+  max-width: 1000px;
+  margin: 0 auto 28px;
+  padding: 30px 32px;
+  border: 1px solid #e5e9df;
+  border-radius: 22px;
+  background: #ffffff;
+  animation: profileFadeIn 0.5s ease both;
+}
+
+.client-profile-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #edf0e9;
+}
+
+.client-profile-section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: #edf2e8;
+  color: #6c8767;
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.client-profile-section-heading h2 {
+  margin: 2px 0 7px;
+  color: #314436;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.client-profile-section-heading p {
+  margin: 0;
+  color: #929b90;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Responsive Details Grid */
+
+.client-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.client-profile-field {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+  padding: 19px;
+  border: 1px solid #edf0e9;
+  border-radius: 15px;
+  background: #fcfcf8;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.client-profile-field:hover {
+  border-color: #d2decc;
+  background: #f7f9f2;
+  transform: translateY(-2px);
+}
+
+.client-profile-field-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #eaf0e5;
+  color: #71896d;
+  font-size: 18px;
+}
+
+.client-profile-field > div:last-child {
+  min-width: 0;
+}
+
+.client-profile-field span {
+  display: block;
+  margin-bottom: 7px;
+  color: #8b9588;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.client-profile-field p {
+  margin: 0;
+  color: #334537;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Loading / Error State */
+
+.client-profile-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  min-height: 65vh;
+  padding: 24px;
+  color: #526b50;
+  font-size: 15px;
+  text-align: center;
+}
+
+.client-profile-status {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f0;
+  padding: 24px;
+  text-align: center;
+}
+
+.profile-loading-gif {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.client-profile-status h3 {
+  margin: 0 0 8px;
+  color: #304735;
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.client-profile-status p {
+  margin: 0;
+  color: #859181;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+
+
+
+/* Animation */
+
+@keyframes profileFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .client-profile-page {
+    padding: 35px 5%;
+  }
+
+  .client-profile-card {
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .client-profile-section {
+    padding: 25px 22px;
+  }
+
+  .client-profile-avatar {
+    width: 62px;
+    height: 62px;
+    font-size: 27px;
+  }
+
+  .client-profile-identity h2 {
+    font-size: 21px;
+  }
+
+  .client-profile-edit {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+
+  .client-profile-grid {
+    gap: 12px;
+  }
+
+  .client-profile-field {
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .client-profile-field-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 520px) {
+  .client-profile-page {
+    padding: 25px 16px;
+  }
+
+  .client-profile-header {
+    margin-bottom: 25px;
+  }
+
+  .client-profile-back {
+    margin-bottom: 28px;
+  }
+
+  .client-profile-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .client-profile-header h1 {
+    font-size: 37px;
+  }
+
+  .client-profile-header > p {
+    font-size: 13px;
+  }
+
+  .client-profile-card {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 21px;
+    border-radius: 18px;
+  }
+
+  .client-profile-avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .client-profile-identity {
+    flex: 1;
+  }
+
+  .client-profile-identity h2 {
+    font-size: 20px;
+  }
+
+  .client-profile-edit {
+    width: 100%;
+    margin-top: 3px;
+  }
+
+  .client-profile-section {
+    margin-bottom: 20px;
+    padding: 22px 17px;
+    border-radius: 18px;
+  }
+
+  .client-profile-section-heading {
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .client-profile-section-heading > span {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .client-profile-section-heading h2 {
+    font-size: 20px;
+  }
+
+  .client-profile-section-heading p {
+    font-size: 12px;
+  }
+
+  .client-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .client-profile-field {
+    padding: 16px;
+  }
+
+  .client-profile-field p {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-profile-page *,
+  .client-profile-page *::before,
+  .client-profile-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

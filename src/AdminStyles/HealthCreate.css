@@ -1,0 +1,621 @@
+
+/* ==============================
+   CREATE DIET PLAN PAGE
+================================ */
+
+.create-diet-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px;
+  background: #f7f8f3;
+  color: #29352d;
+  font-family: inherit;
+}
+
+/* HEADER */
+
+.diet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.diet-header span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #83977e;
+}
+
+.diet-header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #26392c;
+}
+
+.diet-header p {
+  font-size: 14px;
+  color: #89928a;
+  margin: 0;
+}
+
+.diet-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border: 1px solid #dce5d8;
+  border-radius: 9px;
+  background: white;
+  color: #405d43;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.diet-back-btn:hover {
+  background: #eaf1e7;
+  border-color: #a9bda3;
+}
+
+/* FORM CARD */
+
+.diet-form-card {
+  background: #ffffff;
+  padding: 27px;
+  border: 1px solid #e8ece4;
+  border-radius: 15px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 18px rgba(43, 65, 43, 0.035);
+}
+
+.diet-form-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #304b35;
+  margin: 0 0 7px;
+}
+
+.diet-form-card > p,
+.diet-section-heading p {
+  font-size: 13px;
+  color: #939b92;
+  margin: 0 0 22px;
+}
+
+/* LABELS */
+
+.diet-form-card label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #59695a;
+  margin-bottom: 9px;
+}
+
+/* INPUTS */
+
+.diet-form-card input,
+.diet-form-card textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #e3e9e0;
+  outline: none;
+  background: #fcfdfb;
+  border-radius: 9px;
+  color: #344536;
+  font-size: 13px;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+.diet-form-card input::placeholder,
+.diet-form-card textarea::placeholder {
+  color: #b1b9b0;
+}
+
+.diet-form-card input:focus,
+.diet-form-card textarea:focus {
+  border-color: #91aa89;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(145, 170, 137, 0.12);
+}
+
+.diet-form-card textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+/* SECTION HEADING */
+
+.diet-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.diet-section-heading p {
+  margin-bottom: 0;
+}
+
+.diet-section-heading > button {
+  white-space: nowrap;
+  padding: 10px 15px;
+  background: #eaf1e7;
+  color: #52734f;
+  border: 1px solid #dce8d8;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.diet-section-heading > button:hover {
+  background: #dce9d8;
+}
+
+/* FRUITS / VEGETABLES / GUIDELINES */
+
+.diet-input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.diet-input-row input {
+  flex: 1;
+}
+
+.diet-input-row button {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #f0dedd;
+  border-radius: 9px;
+  background: #fff8f7;
+  color: #c27770;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.diet-input-row button:hover {
+  background: #fce9e7;
+  color: #b94f48;
+}
+
+/* EXERCISE DAY */
+
+.exercise-day-card {
+  padding: 22px;
+  border: 1px solid #e5ebdf;
+  background: #fafcf8;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.exercise-day-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.exercise-day-heading h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #456448;
+  margin: 0;
+}
+
+.exercise-day-heading button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #f0dedd;
+  background: #fff8f7;
+  color: #c27770;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.exercise-day-heading button:hover {
+  background: #fce9e7;
+}
+
+/* WORKOUT LIST */
+
+.workout-list {
+  margin-top: 22px;
+}
+
+.workout-item {
+  background: #ffffff;
+  border: 1px solid #e9eee5;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.workout-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 17px;
+}
+
+.workout-fields input {
+  width: 100%;
+}
+
+/* REMOVE WORKOUT */
+
+.remove-workout {
+  margin-top: 15px;
+  padding: 7px 12px;
+  border: none;
+  background: transparent;
+  color: #bd7770;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.remove-workout:hover {
+  color: #a53e38;
+}
+
+/* ADD WORKOUT */
+
+.add-workout-btn {
+  padding: 10px 16px;
+  border: 1px dashed #a9bda3;
+  background: #f1f6ee;
+  color: #52734f;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-workout-btn:hover {
+  background: #e5efe0;
+  border-color: #799675;
+}
+
+/* SUBMIT AREA */
+
+.diet-submit-area {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0 30px;
+}
+
+.diet-submit-area button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 190px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #527653;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.diet-submit-area button:hover:not(:disabled) {
+  background: #3e6041;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(65, 102, 66, 0.18);
+}
+
+.diet-submit-area button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* HEADER */
+
+.client-selection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.client-selection-header span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #8b9e82;
+}
+
+.client-selection-header h3 {
+  font-size: 27px;
+  font-weight: 700;
+  color: #304b35;
+  margin: 8px 0;
+}
+
+.client-selection-header p {
+  font-size: 13px;
+  color: #929b91;
+  margin: 0;
+}
+
+.client-count {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #eaf1e7;
+  color: #527653;
+  padding: 11px 16px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* SEARCH BOX */
+
+.client-search-box {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  max-width: 550px;
+  height: 50px;
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #e4eae0;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.client-search-box:focus-within {
+  border-color: #8eaa87;
+  box-shadow: 0 0 0 3px rgba(142, 170, 135, 0.12);
+}
+
+.client-search-box > i {
+  color: #81947d;
+  font-size: 17px;
+}
+
+.client-search-box input {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #354b38;
+  font-size: 13px;
+}
+
+.client-search-box input::placeholder {
+  color: #abb4a9;
+}
+
+.client-search-box button {
+  border: none;
+  background: transparent;
+  color: #9aa79a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CLIENT LIST */
+
+.client-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+/* CLIENT CARD */
+
+.client-select-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 18px 22px;
+  background: #ffffff;
+  border: 1px solid #e7ece3;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.client-select-card:hover {
+  border-color: #b5c9ad;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(48, 75, 53, 0.06);
+}
+
+/* AVATAR */
+
+.client-avatar {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf1e7;
+  color: #527653;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* CLIENT DETAILS */
+
+.client-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.client-info h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #354b38;
+  margin: 0 0 6px;
+}
+
+.client-info p {
+  font-size: 12px;
+  color: #929b91;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* CHOOSE BUTTON */
+
+.client-select-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 16px;
+  background: #527653;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.client-select-card button:hover {
+  background: #3e6041;
+}
+
+/* EMPTY STATE */
+
+.client-empty {
+  text-align: center;
+  padding: 55px 20px;
+  background: #ffffff;
+  border: 1px solid #e7ece3;
+  border-radius: 12px;
+}
+
+.client-empty > i {
+  font-size: 35px;
+  color: #8da387;
+}
+
+.client-empty h5 {
+  margin: 13px 0 7px;
+  font-size: 16px;
+  color: #405a43;
+}
+
+.client-empty p {
+  color: #929b91;
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .client-selection-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .client-selection-header h3 {
+    font-size: 23px;
+  }
+
+  .client-search-box {
+    max-width: 100%;
+  }
+
+  .client-select-card {
+    padding: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .client-info {
+    flex: 1;
+  }
+
+  .client-select-card button {
+    width: 100%;
+  }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .create-diet-page {
+    padding: 22px 16px;
+  }
+
+  .diet-header {
+    align-items: flex-start;
+  }
+
+  .diet-header h2 {
+    font-size: 24px;
+  }
+
+  .diet-form-card {
+    padding: 20px 16px;
+  }
+
+  .workout-fields {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .exercise-day-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diet-header {
+    flex-direction: column;
+  }
+
+  .diet-header h2 {
+    font-size: 22px;
+  }
+
+  .diet-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .diet-section-heading > button {
+    width: 100%;
+  }
+
+  .diet-submit-area button {
+    width: 100%;
+  }
+
+  .diet-input-row {
+    gap: 8px;
+  }
+}

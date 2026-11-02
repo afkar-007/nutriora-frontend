@@ -1,0 +1,514 @@
+/* ========================================
+   NUTRIORA — CLIENT PERSONAL PROFILE
+   Premium Wellness SaaS Design
+======================================== */
+
+.client-profile-page {
+  min-height: 100vh;
+  padding: 48px 7%;
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(177, 203, 174, 0.18),
+      transparent 32%
+    ),
+    #f7f8f3;
+  color: #26372d;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.client-profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.client-profile-header span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #718b70;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.client-profile-header h1 {
+  margin: 0;
+  color: #26392d;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 750;
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+
+.client-profile-header p {
+  margin: 12px 0 0;
+  color: #7b857c;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Back Button */
+
+.client-profile-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 20px;
+  border: 1px solid #dce5d8;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #405c43;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.client-profile-back i {
+  font-size: 16px;
+}
+
+.client-profile-back:hover {
+  background: #354f3a;
+  border-color: #354f3a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(53, 79, 58, 0.15);
+}
+
+/* ========================================
+   PROFILE CARD
+======================================== */
+
+.client-profile-card {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 42px;
+  overflow: hidden;
+  border: 1px solid rgba(218, 227, 214, 0.85);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow:
+    0 18px 55px rgba(43, 63, 44, 0.055),
+    0 3px 10px rgba(43, 63, 44, 0.025);
+  animation: clientProfileAppear 0.55s ease both;
+}
+
+/* Soft decorative background */
+
+.client-profile-card::before {
+  content: "";
+  position: absolute;
+  top: -95px;
+  right: -65px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(188, 211, 181, 0.24),
+    rgba(188, 211, 181, 0)
+  );
+  pointer-events: none;
+}
+
+/* Profile Avatar */
+
+.client-profile-avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 94px;
+  height: 94px;
+  margin: 0 auto 20px;
+  border: 1px solid #dce8d8;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #edf4e9, #dce9d7);
+  color: #476c4b;
+  box-shadow: 0 8px 22px rgba(74, 111, 77, 0.08);
+}
+
+.client-profile-avatar i {
+  font-size: 43px;
+}
+
+/* Name and City */
+
+.client-profile-card > h2 {
+  position: relative;
+  margin: 0;
+  color: #26392d;
+  font-size: 27px;
+  font-weight: 750;
+  letter-spacing: -0.6px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.client-profile-card > p {
+  margin: 9px 0 0;
+  color: #829080;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Divider */
+
+.client-profile-divider {
+  height: 1px;
+  margin: 34px 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e4eae0 15%,
+    #e4eae0 85%,
+    transparent
+  );
+}
+
+/* ========================================
+   PERSONAL INFORMATION GRID
+======================================== */
+
+.client-profile-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.client-profile-field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+  min-height: 94px;
+  padding: 20px;
+  border: 1px solid #edf0e9;
+  border-radius: 17px;
+  background: #fafbf8;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.client-profile-field:hover {
+  border-color: #d4e2ce;
+  background: #f5f8f1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(49, 77, 49, 0.045);
+}
+
+/* Individual Field Icons */
+
+.client-profile-field-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e1eadc;
+  border-radius: 14px;
+  background: #edf4e9;
+  color: #527454;
+}
+
+.client-profile-field-icon i {
+  font-size: 21px;
+}
+
+/* Field Labels */
+
+.client-profile-field > div:last-child {
+  min-width: 0;
+}
+
+.client-profile-field span {
+  display: block;
+  margin-bottom: 7px;
+  color: #899287;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.client-profile-field h4 {
+  margin: 0;
+  color: #344538;
+  font-size: 15px;
+  font-weight: 650;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ========================================
+   LOADING STATE
+======================================== */
+
+.client-profile-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 100vh;
+  background: #f7f8f3;
+  color: #4c6d4e;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.client-profile-loading::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dce8d8;
+  border-top-color: #547956;
+  border-radius: 50%;
+  animation: clientProfileSpin 0.75s linear infinite;
+}
+
+/* ========================================
+   EMPTY PROFILE STATE
+======================================== */
+
+.client-profile-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 32px 20px;
+  text-align: center;
+  animation: clientProfileAppear 0.45s ease both;
+}
+
+.client-profile-empty > i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 86px;
+  height: 86px;
+  margin-bottom: 24px;
+  border: 1px solid #dce8d8;
+  border-radius: 26px;
+  background: #eaf2e5;
+  color: #547956;
+  font-size: 40px;
+}
+
+.client-profile-empty h2 {
+  margin: 0 0 12px;
+  color: #2c4031;
+  font-size: 25px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.client-profile-empty p {
+  max-width: 380px;
+  margin: 0 0 24px;
+  color: #7c877b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.client-profile-empty a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 23px;
+  border: 1px solid #36563b;
+  border-radius: 12px;
+  background: #36563b;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.client-profile-empty a:hover {
+  border-color: #263e2b;
+  background: #263e2b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(53, 79, 58, 0.15);
+}
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes clientProfileAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clientProfileSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .client-profile-page {
+    padding: 35px 5%;
+  }
+
+  .client-profile-header {
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .client-profile-header h1 {
+    font-size: 30px;
+  }
+
+  .client-profile-card {
+    padding: 30px 24px;
+    border-radius: 22px;
+  }
+
+  .client-profile-info {
+    gap: 13px;
+  }
+
+  .client-profile-field {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .client-profile-field-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+
+  .client-profile-field-icon i {
+    font-size: 19px;
+  }
+
+  .client-profile-field h4 {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 520px) {
+  .client-profile-page {
+    padding: 26px 16px;
+  }
+
+  .client-profile-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .client-profile-header span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .client-profile-header h1 {
+    font-size: 27px;
+  }
+
+  .client-profile-header p {
+    margin-top: 9px;
+    font-size: 13px;
+  }
+
+  .client-profile-back {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .client-profile-card {
+    padding: 28px 18px;
+    border-radius: 20px;
+  }
+
+  .client-profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+  }
+
+  .client-profile-avatar i {
+    font-size: 36px;
+  }
+
+  .client-profile-card > h2 {
+    font-size: 23px;
+  }
+
+  .client-profile-divider {
+    margin: 27px 0;
+  }
+
+  .client-profile-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .client-profile-field {
+    min-height: 82px;
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .client-profile-field span {
+    font-size: 10px;
+  }
+
+  .client-profile-field h4 {
+    font-size: 14px;
+  }
+
+  .client-profile-empty h2 {
+    font-size: 22px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .client-profile-page *,
+  .client-profile-empty,
+  .client-profile-loading::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}

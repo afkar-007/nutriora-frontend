@@ -1,0 +1,452 @@
+.client-health-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f7f9f6;
+  color: #293e30;
+}
+
+/* Header */
+
+.client-health-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.client-health-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: #66866a;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.client-health-subtitle {
+  color: #829a83;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.client-health-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.client-health-description {
+  color: #89958b;
+  font-size: 13px;
+}
+
+.client-health-status {
+  padding: 8px 17px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 650;
+  background: #e5f3e6;
+  color: #53805a;
+}
+
+.client-health-status.completed {
+  background: #e9edf0;
+  color: #647783;
+}
+
+.client-health-status.paused {
+  background: #fff1dd;
+  color: #b27b36;
+}
+
+/* Client Profile */
+
+.client-health-profile {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 22px;
+  background: white;
+  border: 1px solid #e7ede6;
+  border-radius: 16px;
+  margin-bottom: 25px;
+}
+
+.client-health-profile-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: #eaf2e9;
+  color: #628467;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.client-health-profile span {
+  font-size: 10px;
+  letter-spacing: 1.2px;
+  color: #91a092;
+  font-weight: 700;
+}
+
+.client-health-profile h3 {
+  font-size: 17px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.client-health-profile p {
+  color: #89958b;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Common Section */
+
+.client-health-section {
+  background: white;
+  border: 1px solid #e7ede6;
+  border-radius: 17px;
+  padding: 23px;
+  margin-bottom: 22px;
+}
+
+.client-health-section-title {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 22px;
+}
+
+.client-health-section-icon {
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #eaf2e9;
+  color: #638568;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.client-health-section-title h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.client-health-section-title p {
+  font-size: 12px;
+  color: #929d93;
+  margin: 0;
+}
+
+/* Overview */
+
+.client-health-overview {
+  background: #f7faf6;
+  border: 1px solid #edf1eb;
+  border-radius: 12px;
+  padding: 20px;
+  color: #64766a;
+  font-size: 13px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Nutrition */
+
+.client-health-nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.client-health-food-card {
+  background: #fafbf9;
+  border: 1px solid #edf1eb;
+  border-radius: 13px;
+  padding: 18px;
+}
+
+.client-health-food-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.client-health-food-heading i {
+  color: #d58a60;
+  font-size: 19px;
+}
+
+.client-health-food-heading h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+  color: #354b39;
+}
+
+.vegetable-heading i {
+  color: #6e9a70;
+}
+
+.client-health-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.client-health-tags span {
+  background: #fff0e8;
+  color: #b77c58;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.vegetable-tags span {
+  background: #eaf3e8;
+  color: #608465;
+}
+
+/* Guidelines */
+
+.client-health-guidelines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.client-health-guideline {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 15px;
+  background: #f8faf7;
+  border-radius: 10px;
+  border: 1px solid #edf1eb;
+}
+
+.client-health-guideline i {
+  color: #77a17b;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+.client-health-guideline p {
+  color: #66776a;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Exercises */
+
+.client-health-exercises {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.client-health-day-card {
+  border: 1px solid #e9eee7;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.client-health-day-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  background: #f5f8f3;
+  border-bottom: 1px solid #e9eee7;
+}
+
+.client-health-day-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  background: #e5efe3;
+  color: #66886a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.client-health-day-header h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.client-health-day-header p {
+  color: #849386;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Workout */
+
+.client-health-workouts {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.client-health-workout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  background: #fafbf9;
+  border: 1px solid #edf1eb;
+  border-radius: 11px;
+}
+
+.client-health-workout-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.client-health-workout-name i {
+  color: #719477;
+  font-size: 16px;
+}
+
+.client-health-workout-name h5 {
+  font-size: 13px;
+  font-weight: 650;
+  margin: 0;
+  color: #405443;
+  overflow-wrap: anywhere;
+}
+
+.client-health-workout-stats {
+  display: flex;
+  gap: 25px;
+}
+
+.client-health-workout-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 40px;
+}
+
+.client-health-workout-stats span {
+  font-size: 10px;
+  color: #929e93;
+}
+
+.client-health-workout-stats strong {
+  font-size: 12px;
+  color: #58765d;
+}
+
+/* Empty & Loading */
+
+.client-health-no-data {
+  color: #9aa49b;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.client-health-loading,
+.client-health-empty {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  color: #66866a;
+}
+
+.client-health-empty i {
+  font-size: 40px;
+}
+
+.client-health-empty h3 {
+  color: #354b39;
+}
+
+.client-health-empty p {
+  color: #89958b;
+  font-size: 13px;
+}
+
+.client-health-empty button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 9px;
+  background: #567c5c;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .client-health-nutrition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-health-workout {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .client-health-workout-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 550px) {
+  .client-health-page {
+    padding: 17px;
+  }
+
+  .client-health-header {
+    align-items: flex-start;
+  }
+
+  .client-health-header h2 {
+    font-size: 23px;
+  }
+
+  .client-health-section {
+    padding: 16px;
+  }
+
+  .client-health-section-title h3 {
+    font-size: 15px;
+  }
+
+  .client-health-profile {
+    padding: 16px;
+  }
+}

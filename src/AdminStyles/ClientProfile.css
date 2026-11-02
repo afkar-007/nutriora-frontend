@@ -1,0 +1,261 @@
+
+.client-profile-page {
+  min-height: 100vh;
+  padding: 35px;
+  background: #f7f8f3;
+  color: #26352d;
+  font-family: Arial, sans-serif;
+}
+
+/* Back Button */
+.profile-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 17px;
+  border: 1px solid #dce4d9;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #405d48;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-back-btn:hover {
+  background: #e8efe5;
+  transform: translateX(-3px);
+}
+
+/* Page Heading */
+.profile-heading {
+  margin: 35px 0 30px;
+}
+
+.profile-heading span {
+  color: #78957c;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.profile-heading h2 {
+  margin: 10px 0;
+  color: #263b2e;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-heading p {
+  margin: 0;
+  color: #829087;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Personal Details */
+.personal-details-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px;
+  background: #e9f0e5;
+  border: 1px solid #dce7d7;
+  border-radius: 18px;
+  margin-bottom: 38px;
+}
+
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  background: #d5e4d1;
+  border-radius: 16px;
+  color: #41694b;
+  font-size: 27px;
+}
+
+.personal-details-card h3 {
+  margin: 0 0 8px;
+  color: #2c4634;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.personal-details-card p {
+  margin: 0;
+  color: #748477;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.personal-details-card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-left: auto;
+  padding: 12px 17px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 10px;
+  background: #456b4e;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.personal-details-card button:hover {
+  background: #315239;
+  transform: translateY(-2px);
+}
+
+/* Section Heading */
+.profile-section-heading {
+  margin-bottom: 20px;
+}
+
+.profile-section-heading h3 {
+  margin: 0 0 8px;
+  color: #2b4032;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.profile-section-heading p {
+  margin: 0;
+  color: #849087;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Health Information Cards */
+.profile-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.profile-option-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+  padding: 23px;
+  background: #ffffff;
+  border: 1px solid #e6eae2;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.profile-option-card:hover {
+  transform: translateY(-4px);
+  border-color: #b7cdb5;
+  box-shadow: 0 10px 25px rgba(48, 76, 54, 0.08);
+}
+
+.profile-option-card > i:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #edf3e9;
+  border-radius: 13px;
+  color: #557a5c;
+  font-size: 21px;
+}
+
+.profile-option-card > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-option-card h4 {
+  margin: 0 0 8px;
+  color: #314536;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile-option-card p {
+  margin: 0;
+  color: #89938b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.profile-option-card > i:last-child {
+  flex-shrink: 0;
+  color: #9eafa0;
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.profile-option-card:hover > i:last-child {
+  transform: translateX(4px);
+  color: #456b4e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .client-profile-page {
+    padding: 25px 18px;
+  }
+
+  .profile-heading {
+    margin-top: 28px;
+  }
+
+  .profile-heading h2 {
+    font-size: 27px;
+  }
+
+  .profile-options {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .personal-details-card {
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .personal-details-card button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .client-profile-page {
+    padding: 20px 13px;
+  }
+
+  .profile-option-card {
+    gap: 12px;
+    padding: 17px 13px;
+  }
+
+  .profile-option-card > i:first-child {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .profile-option-card h4 {
+    font-size: 13px;
+  }
+
+  .profile-option-card p {
+    font-size: 11px;
+  }
+}

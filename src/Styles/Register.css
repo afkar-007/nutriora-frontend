@@ -1,0 +1,646 @@
+
+/* ========================================
+   NUTRIORA - REGISTER PAGE
+   Premium Wellness SaaS Design
+======================================== */
+
+.register-page {
+  --primary: #537b62;
+  --primary-dark: #3d624c;
+  --primary-light: #e8f0e8;
+  --text-primary: #252e28;
+  --text-secondary: #7c857e;
+  --border-color: #e4e8e1;
+  --surface: #ffffff;
+  --background: #faf9f5;
+
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ========================================
+   BRAND SECTION
+======================================== */
+
+.register-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: clamp(32px, 5vw, 76px);
+  overflow: hidden;
+  color: #f9fbf6;
+  background:
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(193, 218, 179, 0.2),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(224, 235, 201, 0.16),
+      transparent 32%
+    ),
+    linear-gradient(   145deg,
+      #2cde00 0%,
+      #000000 48%,
+      #354e3c 100%);
+}
+
+.register-brand::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  top: 25%;
+  right: -190px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 45px rgba(255, 255, 255, 0.035),
+    0 0 0 90px rgba(255, 255, 255, 0.025);
+  pointer-events: none;
+}
+
+.register-brand::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  bottom: -110px;
+  left: -90px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Brand logo */
+
+.auth-logo,
+.mobile-logo {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  color: inherit;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.13);
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+/* Brand content */
+
+.brand-content {
+  position: relative;
+  z-index: 1;
+  max-width: 530px;
+  margin: 60px 0;
+  animation: registerFadeUp 0.8s ease both;
+}
+
+.brand-label {
+  display: inline-block;
+  margin-bottom: 27px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #e1ecd9;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-content h1 {
+  margin: 0 0 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 5.2vw, 76px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+}
+
+.brand-content h1 span {
+  color: #d4e5c5;
+  font-style: italic;
+}
+
+.brand-content > p {
+  max-width: 410px;
+  margin: 0;
+  color: rgba(249, 251, 246, 0.79);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.register-brand-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 42px;
+  color: #edf4e7;
+  font-size: 13px;
+}
+
+.register-brand-note i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.brand-footer {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* ========================================
+   FORM SECTION
+======================================== */
+
+.register-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 42px clamp(24px, 5vw, 80px);
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(219, 231, 211, 0.24),
+      transparent 45%
+    ),
+    #faf9f5;
+}
+
+.register-form-container {
+  width: 100%;
+  max-width: 440px;
+  margin: auto;
+  animation: registerFadeUp 0.7s ease both;
+}
+
+.mobile-logo {
+  display: none;
+  margin-bottom: 36px;
+  color: var(--text-primary);
+}
+
+/* Heading */
+
+.register-heading {
+  margin-bottom: 29px;
+}
+
+.auth-eyebrow {
+  display: inline-block;
+  margin-bottom: 13px;
+  color: var(--primary);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.register-heading h2 {
+  margin: 0 0 12px;
+  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 3vw, 39px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.register-heading > p {
+  max-width: 380px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   FORM INPUTS
+======================================== */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.register-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.register-form .form-group > label,
+.password-label > label {
+  color: #374139;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.register-form .form-group input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 49px;
+  padding: 0 15px;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.register-form .form-group input::placeholder {
+  color: #a5aca5;
+  font-size: 12px;
+}
+
+.register-form .form-group input:hover {
+  border-color: #c7d3c6;
+}
+
+.register-form .form-group input:focus {
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(83, 123, 98, 0.11);
+}
+
+.register-form .form-group input:focus-visible {
+  outline: none;
+}
+
+/* Password label */
+
+.password-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.password-hint {
+  color: #929a92;
+  font-size: 10px;
+}
+
+/* Password field + eye icon */
+
+.register-password-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.register-password-wrap input {
+  padding-right: 48px !important;
+}
+
+.register-password-wrap .password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 30px;
+  padding: 0;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #89938a;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.register-password-wrap .password-toggle:hover {
+  color: var(--primary);
+}
+
+.register-password-wrap .password-toggle i {
+  font-size: 17px;
+}
+
+/* ========================================
+   ERROR MESSAGE
+======================================== */
+
+.register-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 12px 14px;
+  border: 1px solid #f0d0ca;
+  border-radius: 9px;
+  background: #fff4f1;
+  color: #b53f32;
+  font-size: 12px;
+  line-height: 1.6;
+  animation: registerFadeUp 0.2s ease both;
+}
+
+.register-error i {
+  margin-top: 1px;
+  font-size: 15px;
+}
+
+/* ========================================
+   TERMS AND CONDITIONS
+======================================== */
+
+.register-terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 1px;
+  color: #737d74;
+  font-size: 11px;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.register-terms input {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.register-terms span {
+  min-width: 0;
+}
+
+.register-terms a {
+  color: var(--primary-dark);
+  font-weight: 650;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.register-terms a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
+
+.register-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 51px;
+  margin-top: 1px;
+  padding: 13px 20px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background-color:  #2cde00;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 5px 14px rgba(65, 101, 75, 0.13);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.register-submit:disabled{
+  cursor:wait ;
+}
+
+
+
+
+
+.register-submit i {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.register-submit:hover {
+  transform: translateY(-2px);
+ 
+  box-shadow: 0 9px 20px rgba(65, 101, 75, 0.2);
+}
+
+.register-submit:hover i {
+  transform: translateX(4px);
+}
+
+.register-submit:active {
+  transform: translateY(0);
+}
+
+.register-submit:focus-visible {
+  outline: 3px solid rgba(83, 123, 98, 0.3);
+  outline-offset: 3px;
+}
+
+/* ========================================
+   SIGN IN LINK + FOOTER
+======================================== */
+
+.register-form-container .auth-switch {
+  margin: 25px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-align: center;
+}
+
+.register-form-container .auth-switch a {
+  color: var(--primary-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-form-container .auth-switch a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.register-legal {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #e9e9e1;
+  color: #a0a69e;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes registerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .register-page {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+
+  .register-brand {
+    padding: 38px;
+  }
+
+  .brand-content h1 {
+    font-size: clamp(43px, 5vw, 58px);
+  }
+
+  .register-form-section {
+    padding: 36px 30px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .register-page {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .register-brand {
+    display: none;
+  }
+
+  .register-form-section {
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 34px 22px;
+  }
+
+  .register-form-container {
+    max-width: 440px;
+  }
+
+  .mobile-logo {
+    display: inline-flex;
+    margin-bottom: 35px;
+    font-size: 23px;
+  }
+
+  .mobile-logo .logo-icon {
+    border-color: #d6e2d4;
+    background: #e9f0e5;
+    color: var(--primary-dark);
+  }
+
+  .register-heading {
+    margin-bottom: 27px;
+  }
+
+  .register-heading h2 {
+    font-size: 34px;
+  }
+
+  .register-form {
+    gap: 18px;
+  }
+
+  .register-form .form-group input {
+    height: 50px;
+  }
+
+  .register-legal {
+    margin-top: 25px;
+  }
+}
+
+/* Smaller mobile screens */
+
+@media (max-width: 380px) {
+  .register-form-section {
+    padding: 26px 17px;
+  }
+
+  .register-heading h2 {
+    font-size: 29px;
+  }
+
+  .register-heading > p {
+    font-size: 12px;
+  }
+
+  .register-terms {
+    font-size: 10px;
+  }
+}
+
+/* Accessibility: reduce motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .register-page *,
+  .register-page *::before,
+  .register-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

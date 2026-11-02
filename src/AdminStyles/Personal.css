@@ -1,0 +1,607 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.personal-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, "DM Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+/* BACK BUTTON */
+
+.personal-back-btn {
+  position: absolute;
+  top: 20px;
+  left: 2px;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 19px;
+  border: 1px solid #e7e7e7;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  color: #1d1d1f;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.personal-back-btn > i:first-child {
+  font-size: 16px;
+  transition: transform 0.35s ease;
+}
+
+.personal-back-btn .back-heart {
+  color: #b5b5b5;
+  font-size: 11px;
+  transition: 0.35s ease;
+}
+
+.personal-back-btn:hover {
+  background: #1d1d1f;
+  color: white;
+  border-color: #1d1d1f;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.personal-back-btn:hover > i:first-child {
+  transform: translateX(-4px);
+}
+
+.personal-back-btn:hover .back-heart {
+  color: #ff718b;
+  transform: scale(1.3);
+}
+
+.personal-back-btn:active {
+  transform: scale(0.96);
+}
+
+/* NAVBAR */
+
+.personal-navbar {
+  width: 100%;
+  height: 85px;
+  padding: 0 8%;
+  padding-left: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+}
+
+.personal-navbar h2 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.8px;
+}
+
+.personal-navbar h2 span {
+  color: #ef7891;
+}
+
+.personal-nav-text {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #999999;
+  font-weight: 600;
+}
+
+/* HERO */
+
+.personal-hero {
+  min-height: 650px;
+  padding: 150px 20px 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 100%, #fceef1 0%, transparent 50%),
+    #fafafa;
+}
+
+.personal-overline {
+  color: #a0a0a0;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+}
+
+.personal-hero h1 {
+  font-size: clamp(55px, 8vw, 100px);
+  line-height: 1.02;
+  letter-spacing: -6px;
+  font-weight: 750;
+  color: #1d1d1f;
+}
+
+.personal-hero h1 span {
+  color: #a0a0a0;
+}
+
+.personal-hero-description {
+  max-width: 490px;
+  margin-top: 32px;
+  color: #777777;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.personal-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 75px;
+  color: #999999;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.personal-scroll i {
+  font-size: 19px;
+  animation: scrollDown 1.5s infinite;
+}
+
+@keyframes scrollDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* PHOTO SECTION */
+
+.personal-photos {
+  padding: 120px 8%;
+  background: #ffffff;
+}
+
+.personal-section-heading {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.personal-section-heading span,
+.personal-story-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #a0a0a0;
+}
+
+.personal-section-heading h2 {
+  margin-top: 18px;
+  font-size: clamp(30px, 4vw, 48px);
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.personal-photo-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.personal-photo-card {
+  overflow: hidden;
+}
+
+.personal-image-wrapper {
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #eeeeee;
+}
+
+.personal-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: filter 0.9s ease, transform 1s ease;
+}
+
+.personal-photo-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.045);
+}
+
+.personal-photo-caption {
+  padding: 22px 5px;
+}
+
+.personal-photo-caption h3 {
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -0.5px;
+}
+
+.personal-photo-caption p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #999999;
+}
+
+/* STORY SECTIONS */
+
+.personal-story {
+  padding: 140px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.friendship-story {
+  background: #f7f7f7;
+}
+
+.love-story {
+  background: #ffffff;
+}
+
+.personal-story h2 {
+  margin-top: 30px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 6vw, 75px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -2px;
+}
+
+.friendship-story h2 span {
+  color: #929292;
+}
+
+.love-story h2 span {
+  color: #e58ca0;
+}
+
+.personal-story > p {
+  max-width: 680px;
+  margin-top: 35px;
+  color: #777777;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.personal-story > p + p {
+  margin-top: 18px;
+}
+
+.personal-quote {
+  max-width: 550px;
+  margin-top: 55px;
+  padding: 25px 15px 0;
+  border-top: 1px solid #e4dadd;
+  color: #555555;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* FINAL SECTION */
+
+.personal-ending {
+  min-height: 620px;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #111111;
+  color: #ffffff;
+}
+
+.personal-ending > span {
+  color: #888888;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 2.5px;
+}
+
+.personal-ending h2 {
+  margin-top: 35px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(50px, 7vw, 90px);
+  line-height: 1.15;
+  letter-spacing: -3px;
+  font-weight: 600;
+}
+
+.personal-ending h2 span {
+  color: #e98ca1;
+}
+
+.personal-ending > p {
+  max-width: 450px;
+  margin-top: 30px;
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.personal-ending-icon {
+  width: 55px;
+  height: 55px;
+  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  color: #ef829b;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+
+.personal-ending-icon:hover {
+  background: #ef829b;
+  color: #ffffff;
+  transform: scale(1.12);
+  box-shadow: 0 0 30px rgba(239, 130, 155, 0.25);
+}
+
+.personal-ending h3 {
+  margin-top: 20px;
+  color: #999999;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* VIDEO SECTION */
+
+.personal-video-section {
+  padding: 120px 8%;
+  background:
+    radial-gradient(ellipse at 50% 0%, #fceef1 0%, transparent 55%),
+    #f8f8f8;
+  text-align: center;
+}
+
+.personal-video-section > span {
+  color: #999999;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.personal-video-section h2 {
+  margin: 25px 0 50px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 6vw, 70px);
+  line-height: 1.2;
+  letter-spacing: -2px;
+  color: #1d1d1f;
+  font-weight: 600;
+}
+
+.personal-video-section h2 span {
+  color: #e58ca0;
+}
+
+.personal-video-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000000;
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.15);
+}
+
+.personal-video-wrapper video {
+  width: 100%;
+  max-height: 600px;
+  display: block;
+  object-fit: contain;
+}
+
+.personal-video-section > p {
+  margin-top: 28px;
+  color: #888888;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* FOOTER */
+
+.personal-footer {
+  min-height: 80px;
+  padding: 20px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111111;
+  border-top: 1px solid #292929;
+}
+
+.personal-footer p {
+  color: #777777;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .personal-back-btn {
+    left: 5%;
+    top: 15px;
+  }
+
+  .personal-navbar {
+    padding: 0 5%;
+    padding-left: 27%;
+  }
+
+  .personal-hero {
+    min-height: 560px;
+    padding-top: 130px;
+  }
+
+  .personal-hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .personal-photos {
+    padding: 90px 6%;
+  }
+
+  .personal-photo-grid {
+    gap: 20px;
+  }
+
+  .personal-image-wrapper {
+    height: 380px;
+  }
+
+  .personal-story {
+    padding: 100px 25px;
+  }
+
+  .personal-ending {
+    min-height: 550px;
+  }
+
+  .personal-video-section {
+    padding: 90px 6%;
+  }
+}
+
+@media (max-width: 550px) {
+  .personal-back-btn {
+    padding: 9px 13px;
+    gap: 7px;
+    font-size: 11px;
+  }
+
+  .personal-navbar {
+    height: 75px;
+    padding: 0 18px;
+    padding-left: 145px;
+  }
+
+  .personal-navbar h2 {
+    font-size: 17px;
+  }
+
+  .personal-nav-text {
+    display: none;
+  }
+
+  .personal-hero {
+    min-height: 500px;
+    padding: 110px 20px 60px;
+  }
+
+  .personal-hero h1 {
+    font-size: 57px;
+    letter-spacing: -3px;
+  }
+
+  .personal-hero-description {
+    font-size: 14px;
+  }
+
+  .personal-photos {
+    padding: 75px 20px;
+  }
+
+  .personal-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .personal-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .personal-image-wrapper {
+    height: 430px;
+  }
+
+  .personal-photo-caption h3 {
+    font-size: 19px;
+  }
+
+  .personal-story {
+    padding: 85px 25px;
+  }
+
+  .personal-story h2 {
+    font-size: 43px;
+    letter-spacing: -1px;
+  }
+
+  .personal-story > p {
+    font-size: 14px;
+  }
+
+  .personal-quote {
+    font-size: 16px;
+  }
+
+  .personal-ending h2 {
+    font-size: 54px;
+    letter-spacing: -2px;
+  }
+
+  .personal-video-section {
+    padding: 85px 20px;
+  }
+
+  .personal-video-section h2 {
+    font-size: 42px;
+  }
+
+  .personal-video-wrapper {
+    border-radius: 9px;
+  }
+
+  .personal-footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+/* TOUCH DEVICES */
+
+@media (hover: none) {
+  .personal-photo-card img {
+    filter: grayscale(0%);
+  }
+}
