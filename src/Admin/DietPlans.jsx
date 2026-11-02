@@ -157,16 +157,16 @@ function DietPlans() {
     }
 
     // Immediately remove the deleted plan from UI
-    setPlans((previousPlans) =>
-      previousPlans.filter((plan) => plan._id !== planId)
-    );
+    // setPlans((previousPlans) =>
+    //   previousPlans.filter((plan) => plan._id !== planId)
+    // );
 
     // Update client only if this was their last diet plan
     await changeHasDietPlans();
 
     setShowConfirm(false);
 
-    alert(data.message);
+    // alert(data.message);
 
   } catch (err) {
     alert(err.message || "Failed to delete diet plan");

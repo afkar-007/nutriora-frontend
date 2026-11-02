@@ -670,7 +670,9 @@
 .confirm-btn i {
   margin-right: 6px;
 }
-
+.confirm-btn:disabled{
+  cursor: wait;
+}
 /* ================================
    TABLET
 ================================ */

@@ -333,6 +333,10 @@
   gap: 12px;
 }
 
+.health-confirm-actions:disabled{
+  cursor: wait;
+}
+
 .health-cancel-btn,
 .health-confirm-btn {
   flex: 1;

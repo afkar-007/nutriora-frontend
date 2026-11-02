@@ -14,6 +14,7 @@ function Profile() {
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
   const homePageGateWay = localStorage.getItem("homePage");
 
+
   async function Logout(e) {
     e.preventDefault();
     localStorage.removeItem("userLoggedIn");

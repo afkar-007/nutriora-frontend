@@ -10,6 +10,7 @@ function Nutrition() {
   const [selectedDay, setSelectedDay] = useState(0);
   const [showConfirm, setShowConfirm] = useState(false);
 
+
   const [updateId, setUpdateId] = useState(null);
   const [updateLoading, setUpdateLoading] = useState(false);
 
@@ -340,7 +341,8 @@ function Nutrition() {
           {selectedDay === 6 && (
             <button
               className="complete-btn"
-              disabled={plan.status === "Completed"}
+              
+              disabled={(plan.status === "Completed")}
               onClick={() => {
                 (setShowConfirm(true), setUpdateId(plan._id));
               }}
