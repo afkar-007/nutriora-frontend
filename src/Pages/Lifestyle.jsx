@@ -121,7 +121,7 @@ function Lifestyle() {
     };
 
     const response = await fetch(
-      `https://route66-backend-1-v5us.onrender.com/user/changeProfile/${id}`,
+      `https://nutriora-backend.onrender.com/user/changeProfile/${id}`,
       {
         method: "POST",
         headers: {
@@ -621,13 +621,13 @@ function Lifestyle() {
 
                <label
                 className="lifestyle-label lifestyle-top-spacing"
-                htmlFor="additionalNotes"
+                htmlFor="eatingRoutine"
               >
                 Tell About Your Eating Routine
               </label>
                 
                  <textarea
-                id="additionalNotes"
+                id="eatingRoutine"
                 name="eatingRoutine"
                 value={formData.eatingRoutine}
                 onChange={handleChange}

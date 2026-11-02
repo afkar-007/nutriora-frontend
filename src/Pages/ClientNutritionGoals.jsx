@@ -28,7 +28,7 @@ function ClientNutritionGoals() {
       }
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/details/NutritionGoalsFetch/${id}`,
+        `https://nutriora-backend.onrender.com/details/NutritionGoalsFetch/${id}`,
         {
           method: "GET",
           headers: {

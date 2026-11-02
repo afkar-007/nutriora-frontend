@@ -61,7 +61,7 @@ function ClientHome() {
     try {
       setLoading(true)
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/user/getOneUser/${id}`,
+        `https://nutriora-backend.onrender.com/user/getOneUser/${id}`,
       );
 
       const data = await response.json();

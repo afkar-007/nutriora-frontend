@@ -23,7 +23,7 @@ function Workout() {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/healthPlan/clientWorkout/${id}`,
+        `https://nutriora-backend.onrender.com/healthPlan/clientWorkout/${id}`,
       );
 
       const data = await response.json();
