@@ -357,6 +357,24 @@ function ClientLifestyle() {
           </p>
         </div>
       </section>
+
+      <section className="lifestyle-section">
+        <div className="lifestyle-section-heading">
+          <i className="bi bi-journal-text"></i>
+          <div>
+            <h2>Eating Routine</h2>
+            <p>Other information you shared with your nutritionist</p>
+          </div>
+        </div>
+
+        <div className="lifestyle-notes-card">
+          <p>
+            {showValue(details.eatingRoutine) === "Not provided"
+              ? "Eating Routine added."
+              : details.eatingRoutine}
+          </p>
+        </div>
+      </section>
     </div>
   );
 }

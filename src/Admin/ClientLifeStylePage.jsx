@@ -256,6 +256,12 @@ function ClientLifestylePage() {
               "No additional notes provided."}
           </p>
         </div>
+        <div className="lifestyle-notes">
+          <p>
+            {details.eatingRoutine ||
+              "No additional notes provided."}
+          </p>
+        </div>
       </div>
     </div>
   );
