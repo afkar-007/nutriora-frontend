@@ -22,6 +22,7 @@ function Profile() {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
     localStorage.removeItem("homePage");
+    localStorage.removeItem("AdminLogin")
     console.log("logout successfully");
   const login = localStorage.getItem("homePage");
   console.log(login);

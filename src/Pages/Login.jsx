@@ -98,7 +98,7 @@ function Login() {
         localStorage.setItem("role",response.role)
         localStorage.setItem("userLoggedIn",true)
         localStorage.setItem("profile",String(response.profile))
-        localStorage.setItem("AdminLogin", "true");
+        // localStorage.setItem("AdminLogin", "true");
 
         // navigate('/personalDetails')
         setEmail("")
