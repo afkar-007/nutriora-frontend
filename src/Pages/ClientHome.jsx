@@ -276,7 +276,7 @@ function ClientHome() {
           </article>
 
           <div className="client-side-panels">
-            <article className="client-panel consultation-panel">
+            {/* <article className="client-panel consultation-panel">
               <span className="client-eyebrow">PERSONAL GUIDANCE</span>
               <span className="consultation-icon">
                 <i className="bi bi-calendar2-heart" />
@@ -289,7 +289,7 @@ function ClientHome() {
               <Link to="/client/consultations" className="client-action-button">
                 Explore consultations <i className="bi bi-arrow-right" />
               </Link>
-            </article>
+            </article> */}
 
             <article className="client-panel quick-actions-panel">
               <span className="client-eyebrow">QUICK ACCESS</span>
