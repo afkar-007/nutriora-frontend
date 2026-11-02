@@ -97,17 +97,18 @@ function ClientFoodHabits() {
 
   if (loading) {
     return (
-      <div className="food-profile-status">
-        <img
-          src={LoadingGif}
-          alt="Loading..."
-          className="profile-loading-gif"
-        />
-        <h3>Loading food preferences</h3>
+       <div className="body-profile-status">
+              <img
+                src={LoadingGif}
+                alt="Loading..."
+                className="profile-loading-gif"
+              />
+              <h3>Loading food preferences</h3>
         <p>Preparing your nutrition profile...</p>
-      </div>
+            </div>
     );
   }
+ 
 
   if (error) {
     return (
