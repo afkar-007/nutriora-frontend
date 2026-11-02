@@ -53,7 +53,7 @@ function Landing() {
   useEffect(() => {
   const adminGateway = localStorage.getItem("AdminLogin");
   const userGateway = localStorage.getItem("userLoggedIn");
-  const clientHomeGateway = localStorage.getItem("ClientHome");
+  const clientHomeGateway = localStorage.getItem("homePage");
 
   // Client login
   if (userGateway === "true") {
