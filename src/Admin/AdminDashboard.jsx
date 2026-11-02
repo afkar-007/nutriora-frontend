@@ -323,14 +323,14 @@ function adminGateway() {
           </nav>
 
           <div className="nutritionist-sidebar-bottom">
-            <div className="nutritionist-support-card">
+            {/* <div className="nutritionist-support-card">
               <div className="nutritionist-support-icon">
                 <i className="bi bi-heart-pulse" />
               </div>
 
               <h4>Your wellness workspace</h4>
               <p>Small healthy changes make a lasting difference.</p>
-            </div>
+            </div> */}
 
             <button
               type="button"

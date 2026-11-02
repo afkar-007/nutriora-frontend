@@ -371,6 +371,29 @@
   background: #3f5d46;
 }
 
+
+.body-profile-status {
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 35px 24px;
+  text-align: center;
+  background: #fffef9;
+  border: 1px solid #e5e9df;
+  border-radius: 22px;
+  min-height: 100vh;
+}
+
+.profile-loading-gif {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
 /* Tablet */
 
 @media (max-width: 768px) {
