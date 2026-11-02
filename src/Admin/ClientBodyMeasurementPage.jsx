@@ -12,7 +12,7 @@ function ClientBodyMeasurementPage() {
   async function getBodyMeasurements() {
     try {
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/details/BodyMeasurementFetch/${id}`
+        `https://nutriora-backend.onrender.com/details/BodyMeasurementFetch/${id}`
       );
 
       const data = await response.json();

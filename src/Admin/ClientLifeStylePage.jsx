@@ -27,7 +27,7 @@ function ClientLifestylePage() {
       }
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/details/LifeStyleFetch/${id}`,
+        `https://nutriora-backend.onrender.com/details/LifeStyleFetch/${id}`,
         {
           method: "GET",
           headers: {

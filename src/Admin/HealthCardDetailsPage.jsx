@@ -14,7 +14,7 @@ function HealthCardDetails() {
   async function getHealthDetails() {
     try {
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/healthPlan/healthOneGet/${id}`
+        `https://nutriora-backend.onrender.com/healthPlan/healthOneGet/${id}`
       );
 
       const data = await response.json();

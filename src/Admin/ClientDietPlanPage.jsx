@@ -43,7 +43,7 @@ function ClientDietPlanPage() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/dietPlan/getOneClientPlan/${id}`,
+        `https://nutriora-backend.onrender.com/dietPlan/getOneClientPlan/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

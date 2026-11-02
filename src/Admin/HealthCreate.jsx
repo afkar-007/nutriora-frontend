@@ -191,7 +191,7 @@ function HealthCreate() {
       console.log(data);
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/healthPlan/HealthPost/${id}`,
+        `https://nutriora-backend.onrender.com/healthPlan/HealthPost/${id}`,
         {
           method: "POST",
           headers: {

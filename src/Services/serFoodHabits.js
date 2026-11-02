@@ -1,5 +1,5 @@
 async function FoodHabitsPost(data) {
-  const response = await fetch("https://route66-backend-1-v5us.onrender.com/details/FoodHabits", {
+  const response = await fetch("https://nutriora-backend.onrender.com/details/FoodHabits", {
     method: "Post",
     headers: {
       "Content-Type": "application/json",

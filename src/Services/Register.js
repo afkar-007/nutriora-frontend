@@ -6,7 +6,7 @@ async function register(name, email, confirmPassword) {
   };
   console.log(details);
 
-  const post = await fetch("https://route66-backend-1-v5us.onrender.com/user/register", {
+  const post = await fetch("https://nutriora-backend.onrender.com/user/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

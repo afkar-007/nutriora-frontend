@@ -20,7 +20,7 @@ function HealthCardPage() {
     try {
       setLoading(true);
       const response = await fetch(
-        "https://route66-backend-1-v5us.onrender.com/healthPlan/healthAllGet",
+        "https://nutriora-backend.onrender.com/healthPlan/healthAllGet",
       );
 
       const data = await response.json();
@@ -53,7 +53,7 @@ function HealthCardPage() {
       console.log(id);
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/healthPlan/deleteOnePlan/${id}`,
+        `https://nutriora-backend.onrender.com/healthPlan/deleteOnePlan/${id}`,
         {
           method: "DELETE",
         },

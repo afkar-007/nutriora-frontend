@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../AdminStyles/DietPlans.css";
 import LoadingGif from "../assets/LoadingNutoria.gif";
 
-const API_URL = "https://route66-backend-1-v5us.onrender.com/dietPlan/getPlan";
+const API_URL = "https://nutriora-backend.onrender.com/dietPlan/getPlan";
 
 function DietPlans() {
   const navigate = useNavigate();
@@ -144,7 +144,7 @@ function DietPlans() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/dietPlan/DeleteClientPlan/${deletingId}`,
+        `https://nutriora-backend.onrender.com/dietPlan/DeleteClientPlan/${deletingId}`,
         {
           method: "DELETE",
           headers: {
@@ -189,7 +189,7 @@ function DietPlans() {
       console.log(userId);
 
       const response = await fetch(
-        `https://route66-backend-1-v5us.onrender.com/user/ChangeDietPlan/${userId._id}`,
+        `https://nutriora-backend.onrender.com/user/ChangeDietPlan/${userId._id}`,
         {
           method: "PUT",
           headers: {
@@ -235,7 +235,7 @@ function DietPlans() {
         hasDietPlans: false,
       };
 
-      const response = await fetch(`https://route66-backend-1-v5us.onrender.com/user/ChangeDietPlan/${clientId}`, {
+      const response = await fetch(`https://nutriora-backend.onrender.com/user/ChangeDietPlan/${clientId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

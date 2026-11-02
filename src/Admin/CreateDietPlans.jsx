@@ -24,7 +24,7 @@ function CreateDietPlan() {
         
         const token = localStorage.getItem("token");
 
-        const response = await fetch("https://route66-backend-1-v5us.onrender.com/user/users", {
+        const response = await fetch("https://nutriora-backend.onrender.com/user/users", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -54,7 +54,7 @@ function CreateDietPlan() {
         hasDietPlans: true,
       };
 
-      const response = await fetch(`https://route66-backend-1-v5us.onrender.com/user/ChangeDietPlan/${clientId}`, {
+      const response = await fetch(`https://nutriora-backend.onrender.com/user/ChangeDietPlan/${clientId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
