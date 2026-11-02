@@ -177,7 +177,7 @@ function Personal() {
         <p>Some memories are too special to be forgotten.</p>
       </section>
 
-      Footer
+      
       <footer className="personal-footer">
         <p>OUR MEMORIES © 2026</p>
         <p>A LITTLE CORNER OF HAPPINESS.</p>
