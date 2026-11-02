@@ -29,7 +29,7 @@ function ClientFoodHabits() {
       }
 
       const response = await fetch(
-        `http://localhost:3000/details/FoodHabitsFetch/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/FoodHabitsFetch/${id}`,
         {
           method: "GET",
           headers: {

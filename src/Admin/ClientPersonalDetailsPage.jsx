@@ -14,7 +14,7 @@ function ClientProfile() {
       
 
       const response = await fetch(
-        `http://localhost:3000/details/personalDetailsFetch/${id}`
+        `https://route66-backend-1-v5us.onrender.com/details/personalDetailsFetch/${id}`
       );
 
       const data = await response.json();

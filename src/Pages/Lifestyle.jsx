@@ -121,7 +121,7 @@ function Lifestyle() {
     };
 
     const response = await fetch(
-      `http://localhost:3000/user/changeProfile/${id}`,
+      `https://route66-backend-1-v5us.onrender.com/user/changeProfile/${id}`,
       {
         method: "POST",
         headers: {

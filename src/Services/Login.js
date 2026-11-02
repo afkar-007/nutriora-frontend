@@ -7,7 +7,7 @@ async function LoginUser(email, password) {
   console.log(log);
   
 
-  const logUser = await fetch("http://localhost:3000/user/login", {
+  const logUser = await fetch("https://route66-backend-1-v5us.onrender.com/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

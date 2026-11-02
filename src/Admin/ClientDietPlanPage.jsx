@@ -43,7 +43,7 @@ function ClientDietPlanPage() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:3000/dietPlan/getOneClientPlan/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/dietPlan/getOneClientPlan/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

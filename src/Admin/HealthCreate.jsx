@@ -191,7 +191,7 @@ function HealthCreate() {
       console.log(data);
 
       const response = await fetch(
-        `http://localhost:3000/healthPlan/HealthPost/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/healthPlan/HealthPost/${id}`,
         {
           method: "POST",
           headers: {

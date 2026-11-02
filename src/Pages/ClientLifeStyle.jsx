@@ -28,7 +28,7 @@ function ClientLifestyle() {
       }
 
       const response = await fetch(
-        `http://localhost:3000/details/LifeStyleFetch/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/details/LifeStyleFetch/${id}`,
         {
           method: "GET",
           headers: {

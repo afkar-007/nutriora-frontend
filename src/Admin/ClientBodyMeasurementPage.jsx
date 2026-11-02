@@ -12,7 +12,7 @@ function ClientBodyMeasurementPage() {
   async function getBodyMeasurements() {
     try {
       const response = await fetch(
-        `http://localhost:3000/details/BodyMeasurementFetch/${id}`
+        `https://route66-backend-1-v5us.onrender.com/details/BodyMeasurementFetch/${id}`
       );
 
       const data = await response.json();

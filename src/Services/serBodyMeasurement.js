@@ -1,6 +1,6 @@
 async function BodyMeasurementPost(data) {
   const response = await fetch(
-    "http://localhost:3000/details/BodyMeasurement",
+    "https://route66-backend-1-v5us.onrender.com/details/BodyMeasurement",
     {
       method: "POST",
       headers: {

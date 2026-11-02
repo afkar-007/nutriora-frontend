@@ -21,7 +21,7 @@ function AdminDashboard() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:3000/user/users");
+      const response = await fetch("https://route66-backend-1-v5us.onrender.com/user/users");
 
       const data = await response.json();
 

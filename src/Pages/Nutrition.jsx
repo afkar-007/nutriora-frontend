@@ -23,7 +23,7 @@ function Nutrition() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:3000/dietPlan/getClientPlan/${clientId}`,
+        `https://route66-backend-1-v5us.onrender.com/dietPlan/getClientPlan/${clientId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ function Nutrition() {
         status: "Completed",
       };
       const response = await fetch(
-        `http://localhost:3000/dietPlan/updateComplete/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/dietPlan/updateComplete/${id}`,
         {
           method: "PUT",
           headers: {

@@ -1,6 +1,6 @@
 async function LifeStylePost(data) {
   const response = await fetch(
-    "http://localhost:3000/details/LifeStyle",
+    "https://route66-backend-1-v5us.onrender.com/details/LifeStyle",
     {
       method: "POSt",
       headers: {

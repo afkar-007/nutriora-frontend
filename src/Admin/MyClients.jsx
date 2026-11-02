@@ -22,7 +22,7 @@ function MyClients() {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:3000/user/users",
+          "https://route66-backend-1-v5us.onrender.com/user/users",
           {
             method: "GET",
             headers: {

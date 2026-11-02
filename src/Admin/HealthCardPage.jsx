@@ -20,7 +20,7 @@ function HealthCardPage() {
     try {
       setLoading(true);
       const response = await fetch(
-        "http://localhost:3000/healthPlan/healthAllGet",
+        "https://route66-backend-1-v5us.onrender.com/healthPlan/healthAllGet",
       );
 
       const data = await response.json();
@@ -53,7 +53,7 @@ function HealthCardPage() {
       console.log(id);
 
       const response = await fetch(
-        `http://localhost:3000/healthPlan/deleteOnePlan/${id}`,
+        `https://route66-backend-1-v5us.onrender.com/healthPlan/deleteOnePlan/${id}`,
         {
           method: "DELETE",
         },
