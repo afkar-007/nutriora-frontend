@@ -29,7 +29,7 @@ function ClientFoodHabits() {
       }
 
       const response = await fetch(
-        `https://nutriora-backend.onrender.com/FoodHabitsFetch/${id}`,
+        `https://nutriora-backend.onrender.com/details/FoodHabitsFetch/${id}`,
         {
           method: "GET",
           headers: {
