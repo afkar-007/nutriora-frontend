@@ -628,7 +628,7 @@ function Lifestyle() {
                 
                  <textarea
                 id="additionalNotes"
-                name="additionalNotes"
+                name="eatingRoutine"
                 value={formData.eatingRoutine}
                 onChange={handleChange}
                 className="lifestyle-textarea"
