@@ -3,7 +3,7 @@ import '../AdminStyles/ClientLifeStylePage.css'
 
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import LoadingGif from "../assets/loadingNutoria.gif";
+import LoadingGif from "../assets/LoadingNutoria.gif";
 
 
 function ClientLifestylePage() {

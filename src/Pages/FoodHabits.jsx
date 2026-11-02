@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Styles/foodHabits.css";
+import "../Styles/FoodHabits.css";
 import { useEffect } from "react";
 import FoodHabitsPost from "../Services/serFoodHabits";
 

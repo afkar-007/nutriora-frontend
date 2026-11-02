@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../Styles/ClientHome.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import LoadingGif from "../assets/loadingNutoria.gif";
+import LoadingGif from '../assets/LoadingNutoria.gif'
 
 function ClientHome() {
   const navigate = useNavigate();

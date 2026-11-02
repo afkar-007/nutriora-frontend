@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import LoadingGif from "../assets/loadingNutoria.gif";
+import LoadingGif from "../assets/LoadingNutoria.gif";
 import "../Styles/ClientNutritionGoals.css";
 import { useNavigate } from "react-router-dom";
 function ClientNutritionGoals() {

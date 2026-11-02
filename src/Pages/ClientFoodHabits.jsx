@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LoadingGif from "../assets/loadingNutoria.gif";
+import LoadingGif from "../assets/LoadingNutoria.gif";
 import "../Styles/ClientFoodHabits.css";
 
 function ClientFoodHabits() {

@@ -2,7 +2,7 @@ import '../AdminStyles/ClientNutritionGoalsPage.css'
 
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LoadingGif from "../assets/loadingNutoria.gif";
+import LoadingGif from "../assets/LoadingNutoria.gif";
 import { useParams } from 'react-router-dom';
 
 
