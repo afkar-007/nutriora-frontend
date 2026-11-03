@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../AdminStyles/NutAbt.css";
 
 function NutAbout() {
   const navigate = useNavigate();
+  const [message,setMessage]=useState("")
+const pass = "cringe"
+
+  async function Send() {
+    try{
+      if(message===pass){
+        navigate("/Surprise")
+      }
+
+
+    }
+    catch(err){
+      console.log(err.message);
+      
+    }
+    
+  }
 
   return (
+    <>
     <div className="about-page">
 
       <button className="about-back-btn" onClick={() => navigate("/nutritionist")}>
@@ -224,6 +242,20 @@ function NutAbout() {
         </button> */}
       </section>
     </div>
+
+    <div className="message-input-box">
+  <input
+    type="text"
+    placeholder="Type your message..."
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+  />
+
+  <button onClick={()=>Send()}>
+    <i className="bi bi-send-fill"></i>
+  </button>
+</div>
+    </>
   );
 }
 

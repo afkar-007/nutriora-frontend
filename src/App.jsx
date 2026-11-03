@@ -31,6 +31,7 @@ import NutritionistProfile from './Admin/NutrionistProfile'
 import Secret from './Admin/Secret'
 import Personal from './Admin/Personal'
 import NutAbout from './Admin/NutAbout'
+import Surprise from './Admin/Surprise'
 
 
 
@@ -92,6 +93,7 @@ function App() {
       <Route path='/secret' element={<Secret/>}/>
       <Route path='/personal' element={<Personal/>}/>
       <Route path='/Nutritionist/about' element={<NutAbout/>}/>
+      <Route path='/Surprise' element={<Surprise/>}/>
 
 
       <Route path='nutritionist/clients/:id' element={<ClientProfilePage/>}/>

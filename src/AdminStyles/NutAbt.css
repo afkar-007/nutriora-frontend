@@ -367,6 +367,50 @@
   transform: translateX(-4px);
 }
 
+.message-input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #070a13;
+  border: 1px solid rgba(214, 182, 107, 0.3);
+  border-radius: 50px;
+}
+
+.message-input-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f5f1e9;
+  font-size: 14px;
+}
+
+.message-input-box input::placeholder {
+  color: #858b9b;
+}
+
+.message-input-box button {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d6b66b;
+  color: #070a13;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.message-input-box button:hover {
+  transform: scale(1.08);
+  background: #f2d99c;
+}
+
 @media (max-width: 600px) {
   .about-back-btn {
     top: 18px;
