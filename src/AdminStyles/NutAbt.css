@@ -376,6 +376,8 @@
   background: #070a13;
   border: 1px solid rgba(214, 182, 107, 0.3);
   border-radius: 50px;
+  margin-bottom: 7rem;
+  
 }
 
 .message-input-box input {
@@ -387,6 +389,7 @@
   outline: none;
   color: #f5f1e9;
   font-size: 14px;
+  
 }
 
 .message-input-box input::placeholder {
@@ -404,6 +407,9 @@
   cursor: pointer;
   font-size: 17px;
   transition: 0.3s;
+  position: absolute;
+  margin-top:9rem;
+  margin-left: 9rem;
 }
 
 .message-input-box button:hover {
