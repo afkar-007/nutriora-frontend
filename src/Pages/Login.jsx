@@ -4,6 +4,7 @@ import "../Styles/Login.css";
 import LoginUser from "../Services/Login";
 import { useNavigate } from "react-router-dom";
 
+
 function Login() {
   const navigate = useNavigate()
   const [email, setEmail] = useState("");
@@ -153,7 +154,7 @@ function Login() {
   return (
     <main className="auth-page">
       <section className="auth-brand">
-        <Link to="/" className="auth-logo">
+        <Link to={'/'} className="auth-logo">
           <span className="logo-icon">N</span>
           Nutriora
         </Link>
@@ -178,8 +179,8 @@ function Login() {
 
       <section className="auth-form-section">
         <div className="auth-form-container">
-          <div className="mobile-logo">
-            <span className="logo-icon">N</span>
+          <div onClick={()=>navigate('/')} className="mobile-logo">
+            <span   className="logo-icon">N</span>
             Nutriora
           </div>
 
