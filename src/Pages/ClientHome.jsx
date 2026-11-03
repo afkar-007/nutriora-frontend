@@ -114,10 +114,10 @@ function ClientHome() {
     if (!profileData) {
     return (
       <>
-        <Link to="/">
+        {/* <Link to="/">
           <i className="bi bi-arrow-left" />
           Back to Home
-        </Link>
+        </Link> */}
 
         <div className="client-profile-status">Something went wrong...</div>
       </>
