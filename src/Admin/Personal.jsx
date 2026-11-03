@@ -20,6 +20,20 @@ function Personal() {
     }
   };
 
+  useEffect(()=>{
+adminGateway()
+  },[])
+
+
+  function adminGateway() {
+  const adminGate = localStorage.getItem("AdminLogin");
+
+  if (adminGate !== "true") {
+    navigate("/", { replace: true });
+  }
+}
+  
+
 
 
   return (<>
