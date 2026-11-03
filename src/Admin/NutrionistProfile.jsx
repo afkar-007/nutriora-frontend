@@ -151,7 +151,7 @@ function NutritionistProfile() {
 
             <div>
               <span>Full Name</span>
-              <h3>Vishnu priya dora</h3>
+              <h3>Vishnu priya </h3>
             </div>
           </div>
 
@@ -185,7 +185,7 @@ function NutritionistProfile() {
             <div>
               <span>uniqueness</span>
               <h3 className="profile-account-id">
-                Best nutritionist in the world kuttan
+                Best nutritionist in the world 
               </h3>
             </div>
           </div>
