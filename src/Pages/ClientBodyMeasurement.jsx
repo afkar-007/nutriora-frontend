@@ -30,7 +30,7 @@ function ClientBodyMeasurements() {
 
       return;
     }
-    console.log(login);
+    
 
     
   }

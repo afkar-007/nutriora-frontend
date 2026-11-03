@@ -134,7 +134,7 @@ function Lifestyle() {
     const getData = await response.json();
     if (!response.ok) {
       alert(getData.message);
-      console.log();
+      
       
       return
     }

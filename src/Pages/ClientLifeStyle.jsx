@@ -24,11 +24,11 @@ function ClientLifestyle() {
      const login = localStorage.getItem("homePage");
     if (login !== "true") {
       navigate("/", { replace: true });
-      console.log("not allowed");
+      
 
       return;
     }
-    console.log(login);
+   
 
     
   }
@@ -296,7 +296,7 @@ function ClientLifestyle() {
         <div className="lifestyle-info-grid">
           <div className="lifestyle-info-card">
             <span className="lifestyle-info-icon">
-              <i class="bi bi-activity"></i>
+              <i className="bi bi-activity"></i>
             </span>
             <div>
               <p>Stress Level</p>

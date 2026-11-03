@@ -25,7 +25,7 @@ function Profile() {
     localStorage.removeItem("AdminLogin")
     
   const login = localStorage.getItem("homePage");
-  console.log(login);
+  
   
 
     
@@ -103,7 +103,7 @@ function Profile() {
       }
 
       if (response.ok) {
-        console.log(response.data);
+        
         setProfile(response.data);
       }
     } catch (err) {

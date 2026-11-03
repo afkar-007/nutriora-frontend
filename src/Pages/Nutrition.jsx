@@ -28,11 +28,11 @@ function Nutrition() {
      const login = localStorage.getItem("homePage");
     if (login !== "true") {
       navigate("/", { replace: true });
-      console.log("not allowed");
+      
 
       return;
     }
-    console.log(login);
+    
 
     
   }
@@ -54,7 +54,7 @@ function Nutrition() {
       );
 
       const data = await response.json();
-      console.log(data);
+      
 
       if (!response.ok) {
         throw new Error(data.message || "Failed to load diet plan");

@@ -108,7 +108,7 @@ function Login() {
         const profileGateWay = localStorage.getItem("profile");
         const roleGateway = localStorage.getItem("role")
 
-        console.log(profileGateWay);
+        
         
         if(roleGateway==="admin"){
           navigate("/nutritionist")
@@ -134,11 +134,6 @@ function Login() {
 
      
 
-     console.log(response.id);
-           
-     console.log(response.token);
-     
-     console.log(response.role);
      
 
 

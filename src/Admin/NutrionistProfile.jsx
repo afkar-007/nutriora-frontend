@@ -179,7 +179,7 @@ function NutritionistProfile() {
 
           <div className="profile-info-card">
             <div className="profile-info-icon">
-              <i class="bi bi-hearts"></i>
+              <i className="bi bi-hearts"></i>
             </div>
 
             <div>
