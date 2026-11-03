@@ -71,7 +71,7 @@ function Workout() {
       };
 
       const response = await fetch(
-        `http://localhost:3000/healthPlan/updateWorkout/${health._id}`,
+        `https://nutriora-backend.onrender.com/healthPlan/updateWorkout/${health._id}`,
         {
           method: "PUT",
           headers: {
