@@ -4,10 +4,34 @@ import black from "../assets/snap.jpeg";
 import color from "../assets/color.jpeg";
 import video from "../assets/video.mp4";
 import { Navigate, useNavigate } from "react-router-dom";
+import song from '../assets/punchiri.mp3'
+import { useEffect,useRef } from "react";
+
 
 function Personal() {
   const navigate=useNavigate() 
-  return (
+   const audioRef = useRef(null);
+
+  const playMusic = async () => {
+    try {
+      await audioRef.current.play();
+    } catch (error) {
+      console.log("Audio Error:", error);
+    }
+  };
+
+
+
+  return (<>
+    <div>
+      <audio ref={audioRef} src={song} loop />
+
+      <button className="MusicButton" onClick={playMusic}>
+  <i className="bi bi-play-fill"></i> Play Music
+</button>
+    </div>
+
+
     <div className="personal-page">
       <button className="personal-back-btn" onClick={() => navigate("/nutritionist")}>
         <i className="bi bi-arrow-left"></i>
@@ -58,7 +82,7 @@ function Personal() {
             </div>
 
             <div className="personal-photo-caption">
-              <h3>Me.</h3>
+              <h3>Boomer.</h3>
               <p>One half of this beautiful story.</p>
             </div>
           </div>
@@ -69,7 +93,7 @@ function Personal() {
             </div>
 
             <div className="personal-photo-caption">
-              <h3>My Favourite Person.</h3>
+              <h3>Cringe.</h3>
               <p>The other half of this beautiful story.</p>
             </div>
           </div>
@@ -183,6 +207,7 @@ function Personal() {
         <p>A LITTLE CORNER OF HAPPINESS.</p>
       </footer>
     </div>
+    </>
   );
 }
 
