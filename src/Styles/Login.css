@@ -349,7 +349,13 @@
   padding: 15px 20px;
   border: 1px solid transparent;
   border-radius: 12px;
- background-color:  #2cde00;
+ /* background-color:  #2cde00; */
+   background: linear-gradient(
+    110deg,
+    #74c27d,
+    #05a533,
+    #526f55
+  );
   background-size: 200% 100%;
   color: var(--white);
   font-family: inherit;
