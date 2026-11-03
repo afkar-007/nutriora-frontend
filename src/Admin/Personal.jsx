@@ -195,7 +195,7 @@ adminGateway()
         <h3>Made with memories.</h3>
       </section>
 
-      Final Memories Video
+     
       <section className="personal-video-section">
         <span>05 — OUR LITTLE MEMORIES</span>
 
