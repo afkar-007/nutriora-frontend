@@ -547,7 +547,7 @@ function DietPlans() {
                     </button>
 
                     <div className="diet-plan-actions">
-                      <button
+                      {/* <button
                         type="button"
                         title="Edit diet plan"
                         aria-label="Edit diet plan"
@@ -556,7 +556,7 @@ function DietPlans() {
                         }
                       >
                         <i className="bi bi-pencil" />
-                      </button>
+                      </button> */}
 
                       <button
                         type="button"

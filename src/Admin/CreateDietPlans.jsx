@@ -171,7 +171,7 @@ function CreateDietPlan() {
       
 
       const response = await fetch(
-        "http://localhost:3000/dietPlan/createPlan",
+        "https://nutriora-backend.onrender.com/dietPlan/createPlan",
         {
           method: "POST",
           headers: {
