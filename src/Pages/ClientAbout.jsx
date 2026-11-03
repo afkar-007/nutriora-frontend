@@ -25,7 +25,7 @@ function ClientAbout() {
 
       return;
     }
-    console.log(login);
+    
 
     
   }

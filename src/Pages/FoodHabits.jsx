@@ -166,7 +166,7 @@ function FoodHabits() {
         return;
       }
 
-      console.log("Food Habits & Preferences:", formData);
+      
       const id = localStorage.getItem("id");
 
       const data = {
@@ -181,7 +181,7 @@ function FoodHabits() {
         additionalNotes: formData.additionalNotes,
       };
 
-      console.log(data);
+    
 
       const response = await FoodHabitsPost(data);
       if (!response.ok) {

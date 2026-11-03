@@ -187,7 +187,7 @@ function Lifestyle() {
         eatingRoutine:formData.eatingRoutine
       };
 
-      console.log(data);
+     
 
       const response = await LifeStylePost(data);
 

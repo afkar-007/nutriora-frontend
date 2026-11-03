@@ -69,7 +69,7 @@ function PersonalDetails() {
         return;
       }
 
-      console.log("Personal Information:", formData);
+      
       const id = localStorage.getItem("id");
 
       const details = {

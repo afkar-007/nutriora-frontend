@@ -12,7 +12,7 @@ function NutritionistProfile() {
   const id = localStorage.getItem("id");
 
   useEffect(() => {
-    const login = localStorage.getItem("homePageGateWay");
+    // const login = localStorage.getItem("homePageGateWay");
 
     // if (login !== "true") {
     //   navigate("/", { replace: true });

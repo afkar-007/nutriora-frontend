@@ -13,7 +13,7 @@ function Workout() {
   const navigate = useNavigate();
 
   const id = localStorage.getItem("id");
-  console.log(id);
+ 
 
   useEffect(() => {
 
@@ -29,11 +29,11 @@ function Workout() {
      const login = localStorage.getItem("homePage");
     if (login !== "true") {
       navigate("/", { replace: true });
-      console.log("not allowed");
+      
 
       return;
     }
-    console.log(login);
+    
 
     
   }
@@ -54,7 +54,7 @@ function Workout() {
       }
 
       setHealth(data.data);
-      console.log("hii");
+      
     } catch (error) {
       console.log(error);
     } finally {

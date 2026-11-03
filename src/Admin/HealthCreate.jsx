@@ -9,7 +9,7 @@ function HealthCreate() {
 
   const [loading, setLoading] = useState(false);
 
-  console.log(id);
+  
 
   const [formData, setFormData] = useState({
     overview: "",
@@ -188,7 +188,7 @@ function HealthCreate() {
         })),
       };
 
-      console.log(data);
+      
 
       const response = await fetch(
         `https://nutriora-backend.onrender.com/healthPlan/HealthPost/${id}`,

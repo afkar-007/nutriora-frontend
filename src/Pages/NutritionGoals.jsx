@@ -111,7 +111,7 @@ function NutritionGoals() {
         return;
       }
 
-      console.log("Nutrition Goals:", formData);
+      
 
       const id = localStorage.getItem("id");
       const data = {

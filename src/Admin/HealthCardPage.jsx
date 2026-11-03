@@ -32,7 +32,7 @@ function HealthCardPage() {
 
       setPlans(data.data);
 
-      console.log(data);
+      
     } catch (err) {
       console.log(err.message);
     } finally {
@@ -50,7 +50,6 @@ function HealthCardPage() {
       setDeleteLoading(true);
       setDeleteLoading(id);
 
-      console.log(id);
 
       const response = await fetch(
         `https://nutriora-backend.onrender.com/healthPlan/deleteOnePlan/${id}`,

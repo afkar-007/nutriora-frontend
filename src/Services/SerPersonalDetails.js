@@ -1,7 +1,7 @@
 
 
 async function postPersonalDetails(details) {
-    console.log(details);
+    
     
     
    const response = await fetch("https://nutriora-backend.onrender.com/details/personalDetails",{

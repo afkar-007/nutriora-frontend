@@ -76,12 +76,6 @@ function BodyMeasurements() {
         return;
       }
 
-      console.log("Body Measurements:", {
-        ...formData,
-        height,
-        currentWeight,
-        targetWeight,
-      });
 
       const id = localStorage.getItem("id");
 

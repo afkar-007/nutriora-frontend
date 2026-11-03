@@ -36,7 +36,7 @@ function DietPlans() {
 
       const data = await response.json();
 
-      console.log(data);
+     
       
      
 
@@ -59,7 +59,7 @@ function DietPlans() {
 
   useEffect(() => {
     fetchDietPlans();
-    console.log(userId);
+    
   }, []);
 
   const filteredPlans = useMemo(() => {
@@ -150,7 +150,7 @@ function DietPlans() {
 
     const data = await response.json();
 
-    console.log("Delete response:", data);
+    
 
     if (!response.ok) {
       throw new Error(data.message || "Unable to delete diet plan");
@@ -203,7 +203,7 @@ function DietPlans() {
         return;
       }
 
-      console.log(getData.message);
+      
     } catch (err) {
       console.log(err.message);
     } finally {

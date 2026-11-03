@@ -4,7 +4,7 @@ async function register(name, email, confirmPassword) {
     email: email,
     password: confirmPassword,
   };
-  console.log(details);
+  
 
   const post = await fetch("https://nutriora-backend.onrender.com/user/register", {
     method: "POST",
@@ -16,7 +16,7 @@ async function register(name, email, confirmPassword) {
 
   const data = await post.json();
 
-  console.log(data);
+ 
 
   return {
     ok: post.ok,

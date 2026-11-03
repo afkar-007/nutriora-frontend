@@ -168,7 +168,7 @@ function CreateDietPlan() {
       setSaving(true);
 
       const token = localStorage.getItem("token");
-      console.log(planData);
+      
 
       const response = await fetch(
         "http://localhost:3000/dietPlan/createPlan",

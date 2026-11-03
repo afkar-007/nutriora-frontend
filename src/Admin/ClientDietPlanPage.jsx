@@ -21,7 +21,7 @@ function ClientDietPlanPage() {
     
   }, [id]);
 
-  console.log(id);
+  
 
     function adminGateway() {
   const adminGate = localStorage.getItem("AdminLogin");

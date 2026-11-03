@@ -35,7 +35,7 @@ function AdminDashboard() {
       //   setUsers(data.data || []);
       // }
 
-    localStorage.setItem("AdminLogin", "true");
+    // localStorage.setItem("AdminLogin", "true");
     setUsers(data.data || []);
       
     } catch (err) {
@@ -61,9 +61,9 @@ function AdminDashboard() {
   useEffect(() => {
     async function Loader() {
       
-      
-      await GetUsers()
       await adminGateway()
+      await GetUsers()
+      
       
       
 
@@ -257,7 +257,7 @@ function adminGateway() {
               className="nutritionist-nav-link"
               onClick={() => setSidebarOpen(false)}
             >
-              <i class="bi bi-people-fill"></i>
+              <i className="bi bi-people-fill"></i>
               <span>Health Users</span>
             </Link>
 
@@ -266,7 +266,7 @@ function adminGateway() {
               className="nutritionist-nav-link"
               onClick={() => setSidebarOpen(false)}
             >
-              <i class="bi bi-activity"></i>
+              <i className="bi bi-activity"></i>
               <span>Health Plans</span>
             </Link>
 
@@ -308,7 +308,7 @@ function adminGateway() {
               className="nutritionist-nav-link"
               onClick={() => setSidebarOpen(false)}
             >
-              <i class="bi bi-lock-fill"></i>
+              <i className="bi bi-lock-fill"></i>
               <span>Secret</span>
             </Link>
 
@@ -317,7 +317,7 @@ function adminGateway() {
               className="nutritionist-nav-link"
               onClick={() => setSidebarOpen(false)}
             >
-              <i class="bi bi-journal-text"></i>
+              <i className="bi bi-journal-text"></i>
               <span>About</span>
             </Link>
           </nav>

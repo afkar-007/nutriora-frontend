@@ -4,7 +4,7 @@ async function LoginUser(email, password) {
     email: email,
     password: password,
   };
-  console.log(log);
+  
   
 
   const logUser = await fetch("https://nutriora-backend.onrender.com/user/login", {

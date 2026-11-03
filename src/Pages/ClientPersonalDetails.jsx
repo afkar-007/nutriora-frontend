@@ -35,11 +35,7 @@ function ClientPersonalDetails() {
             data.message || "Failed to fetch profile details"
           );
         }
-        if(response.ok){
-            console.log(data);
-            
-        }
-
+       
         setDetails(data.data);
       } catch (err) {
         setError(err.message);

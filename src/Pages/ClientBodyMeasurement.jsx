@@ -241,13 +241,13 @@ async function checkbodytype() {
           </div>
         ))}
       </div>
-      <div className="body-measurement-card" >
+      {/* <div className="body-measurement-card" >
        <div>
               <span className="body-measurement-label">body type</span>
-             <p>{showBodyType}</p>
+             <p>{showBodyType?showBodyType:"..."}</p>
               
             </div>
-            </div> 
+            </div>  */}
        
     </section>
   );

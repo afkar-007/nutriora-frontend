@@ -23,7 +23,7 @@ function Profile() {
     localStorage.removeItem("role");
     localStorage.removeItem("homePage");
     localStorage.removeItem("AdminLogin")
-    console.log("logout successfully");
+    
   const login = localStorage.getItem("homePage");
   console.log(login);
   
@@ -40,7 +40,7 @@ function Profile() {
 
   if (login !== "true") {
     navigate("/", { replace: true });
-    console.log("not allowed");
+    
     
     return;
   }

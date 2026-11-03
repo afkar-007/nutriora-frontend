@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import '../AdminStyles/ClientPersonalDetailsPage.css'
+import LoadingGif from "../assets/LoadingNutoria.gif";
 
 function ClientProfile() {
   const{id}=useParams()
@@ -33,9 +34,19 @@ function ClientProfile() {
     getPersonalDetails();
   }, []);
 
-  if (loading) {
-    return <div className="client-profile-loading">Loading profile...</div>;
-  }
+    if (loading) {
+      return (
+        <div className="client-profile-status">
+          <img
+            src={LoadingGif}
+            alt="Loading..."
+            className="profile-loading-gif"
+          />
+  
+          <p>Loading Client Profile...</p>
+        </div>
+      );
+    }
 
   if (!details) {
     return (
