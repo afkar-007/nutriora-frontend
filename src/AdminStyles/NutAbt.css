@@ -7,7 +7,7 @@
 
 .about-page {
   width: 100%;
-  min-height: 100vh;
+  min-height: 200vh;
   background: #fafaf5;
   color: #26352d;
   font-family: 'DM Sans', sans-serif;
@@ -371,12 +371,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 100%;
+  width: 50%;
   padding: 8px;
   background: #070a13;
   border: 1px solid rgba(214, 182, 107, 0.3);
   border-radius: 50px;
   margin-bottom: 7rem;
+  margin-left: 20rem;
   
 }
 
@@ -408,13 +409,24 @@
   font-size: 17px;
   transition: 0.3s;
   position: absolute;
-  margin-top:9rem;
-  margin-left: 9rem;
+ margin-left: 19rem;
+ margin-top: 8rem;
 }
 
 .message-input-box button:hover {
   transform: scale(1.08);
   background: #f2d99c;
+}
+
+@media (max-width: 600px){
+  .message-input-box{
+    margin-left: 6rem;
+    text-align: center;
+  }
+  .message-input-box button {
+    margin-left: 5rem;
+
+  }
 }
 
 @media (max-width: 600px) {
