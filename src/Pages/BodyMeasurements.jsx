@@ -316,14 +316,14 @@ function BodyMeasurements() {
           )}
 
           <div className="body-footer">
-            <button
+            {/* <button
               type="button"
               className="body-back"
               onClick={() => window.history.back()}
             >
               <i className="bi bi-arrow-left"></i>
               Back
-            </button>
+            </button> */}
 
             <button type="submit" className="body-continue" disabled={loading} onClick={(e)=>handleSubmit(e)}>
 

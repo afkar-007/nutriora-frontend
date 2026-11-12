@@ -521,14 +521,14 @@ function FoodHabits() {
           )}
 
           <footer className="food-footer">
-            <button
+            {/* <button
               type="button"
               className="food-back"
               onClick={() => navigate(-1)}
             >
               <i className="bi bi-arrow-left"></i>
               Back
-            </button>
+            </button> */}
 
             <button
               type="submit"

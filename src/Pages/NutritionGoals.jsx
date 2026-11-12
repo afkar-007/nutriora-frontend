@@ -297,14 +297,14 @@ function NutritionGoals() {
           )}
 
           <footer className="goals-footer">
-            <button
+            {/* <button
               type="button"
               className="goals-back"
               onClick={() => navigate(-1)}
             >
               <i className="bi bi-arrow-left"></i>
               Back
-            </button>
+            </button> */}
 
             <button type="submit" className="goals-continue" onClick={(e)=>handleSubmit(e)} disabled={loading}>
              {loading?"Loading...": "Continue"}
