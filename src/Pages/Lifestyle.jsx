@@ -746,7 +746,7 @@ function Lifestyle() {
 
 
 
-<label>How frequently do you urinate during the day?</label>
+
 
 
 <div className="urination-section">
