@@ -254,16 +254,25 @@ function ClientFoodHabitsPage() {
               </h3>
             </div>
 
-             <div>
+           
+          </div>
+
+          <div className="client-food-field client-food-field-full">
+
+            <div>
               <span>digestive Concerns</span>
               {details.digestiveConcerns.map((sends)=>
-              <h3 className="client-food-notes">
-                
+              <h3 key={sends._id} className="client-food-notes">
+                {sends.digestiveConcerns}
                 
               </h3>
               )}
             </div>
-          </div>
+
+            </div>
+
+
+
         </div>
       </div>
     </div>
