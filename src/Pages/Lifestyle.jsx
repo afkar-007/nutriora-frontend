@@ -741,6 +741,7 @@ function Lifestyle() {
     <small>Enter the usual number of days your period lasts.</small>
   </div>
 )}
+<br /><br />
 
 
 
