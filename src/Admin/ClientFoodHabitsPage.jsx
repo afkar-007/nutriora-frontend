@@ -158,6 +158,21 @@ function ClientFoodHabitsPage() {
             </div>
           </div>
 
+             <div className="client-food-field">
+            <div className="client-food-icon">
+              <i className="bi bi-calendar2-week"></i>
+            </div>
+
+            <div>
+              <span>other allergy</span>
+              <h3>{details.otherAllergy || "Not provided"}</h3>
+            </div>
+          </div>
+
+
+
+
+
           <div className="client-food-field client-food-field-full">
             <div className="client-food-icon">
               <i className="bi bi-heart"></i>
@@ -177,6 +192,17 @@ function ClientFoodHabitsPage() {
               ) : (
                 <h3>Not provided</h3>
               )}
+            </div>
+          </div>
+
+             <div className="client-food-field">
+            <div className="client-food-icon">
+              <i className="bi bi-calendar2-week"></i>
+            </div>
+
+            <div>
+              <span>Meals Per Day</span>
+              <h3>{details.otherCuisines || "Not provided"}</h3>
             </div>
           </div>
 
