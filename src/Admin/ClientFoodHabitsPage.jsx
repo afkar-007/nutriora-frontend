@@ -1,4 +1,4 @@
-import '../AdminStyles/ClientFoodHabitsPage.css'
+import "../AdminStyles/ClientFoodHabitsPage.css";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
@@ -13,13 +13,12 @@ function ClientFoodHabitsPage() {
   async function getFoodHabits() {
     try {
       const response = await fetch(
-        `https://nutriora-backend.onrender.com/details/foodHabitsFetch/${id}`
+        `https://nutriora-backend.onrender.com/details/foodHabitsFetch/${id}`,
       );
 
       const data = await response.json();
 
       console.log(data);
-      
 
       if (response.ok) {
         setDetails(data.data);
@@ -34,41 +33,35 @@ function ClientFoodHabitsPage() {
   useEffect(() => {
     async function Loader() {
       await getFoodHabits();
-      await adminGateway()
-      
+      await adminGateway();
     }
-    Loader()
-    
+    Loader();
   }, [id]);
 
-      function adminGateway() {
-  const adminGate = localStorage.getItem("AdminLogin");
+  function adminGateway() {
+    const adminGate = localStorage.getItem("AdminLogin");
 
-  if (adminGate !== "true") {
-    navigate("/", { replace: true });
-    return false;
+    if (adminGate !== "true") {
+      navigate("/", { replace: true });
+      return false;
+    }
+
+    return true;
   }
 
-  return true;
-}
+  if (loading) {
+    return (
+      <div className="client-profile-status">
+        <img
+          src={LoadingGif}
+          alt="Loading..."
+          className="profile-loading-gif"
+        />
 
-
-
-
-
-   if (loading) {
-     return (
-       <div className="client-profile-status">
-         <img
-           src={LoadingGif}
-           alt="Loading..."
-           className="profile-loading-gif"
-         />
- 
-         <p>Your wellness journey is loading...</p>
-       </div>
-     );
-   }
+        <p>Your wellness journey is loading...</p>
+      </div>
+    );
+  }
 
   if (!details) {
     return (
@@ -161,7 +154,7 @@ function ClientFoodHabitsPage() {
             </div>
           </div>
 
-             <div className="client-food-field">
+          <div className="client-food-field">
             <div className="client-food-icon">
               <i className="bi bi-calendar2-week"></i>
             </div>
@@ -171,10 +164,6 @@ function ClientFoodHabitsPage() {
               <h3>{details.otherAllergy || "Not provided"}</h3>
             </div>
           </div>
-
-
-
-
 
           <div className="client-food-field client-food-field-full">
             <div className="client-food-icon">
@@ -198,7 +187,7 @@ function ClientFoodHabitsPage() {
             </div>
           </div>
 
-             <div className="client-food-field">
+          <div className="client-food-field">
             <div className="client-food-icon">
               <i className="bi bi-calendar2-week"></i>
             </div>
@@ -253,26 +242,19 @@ function ClientFoodHabitsPage() {
                 {details.additionalNotes || "No additional notes"}
               </h3>
             </div>
-
-           
           </div>
 
           <div className="client-food-field client-food-field-full">
-
             <div>
-              <span>digestive Concerns</span>
-              {details.digestiveConcerns.map((sends)=>
-              <h3 key={sends._id} className="client-food-notes">
-                {sends.digestiveConcerns}
-                
-              </h3>
-              )}
+              <span>Digestive Concerns</span>
+
+              {details.digestiveConcerns?.map((item, index) => (
+                <h3 key={index} className="client-food-notes">
+                  {item}
+                </h3>
+              ))}
             </div>
-
-            </div>
-
-
-
+          </div>
         </div>
       </div>
     </div>
