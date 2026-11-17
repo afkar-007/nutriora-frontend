@@ -255,6 +255,18 @@ function ClientFoodHabitsPage() {
               ))}
             </div>
           </div>
+
+           <div className="client-food-field client-food-field-full">
+            <div>
+              <span>other Digestive Concerns</span>
+
+              <h3 className="client-food-notes">
+                {details.otherDigestiveConcerns || "Not provided"}
+              </h3>
+
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
