@@ -20,8 +20,26 @@ function FoodHabits() {
     cookingPreference: "",
     additionalNotes: "",
 
-    
+    digestiveConcerns: [],
+    otherDigestiveConcern: "",
   });
+
+  const digestiveOptions = [
+    "Normal / No Issues",
+    "Constipation",
+    "Diarrhea",
+    "Bloating",
+    "Acidity / Heartburn",
+    "Gas",
+    "Indigestion",
+    "Stomach Pain",
+    "Nausea",
+    "Acid Reflux (GERD)",
+    "Irritable Bowel Syndrome (IBS)",
+    "Food Intolerance",
+    "Frequent Stomach Upset",
+    "Other",
+  ];
 
   useEffect(() => {
     const foodHabitsGateWay = localStorage.getItem("foodHabits");
@@ -170,6 +188,19 @@ function FoodHabits() {
         return;
       }
 
+      if (formData.digestiveConcerns.length === 0) {
+        setError("Please select your digestive health condition.");
+        return;
+      }
+
+      if (
+        formData.digestiveConcerns.includes("Other") &&
+        !formData.otherDigestiveConcern.trim()
+      ) {
+        setError("Please specify your other digestive concern.");
+        return;
+      }
+
       // if(formData.eatingHabits===""){
       //   setError("Tell us about your eating habits")
       //   return
@@ -189,6 +220,9 @@ function FoodHabits() {
         otherCuisine: formData.otherCuisine,
         cookingPreference: formData.cookingPreference,
         additionalNotes: formData.additionalNotes,
+
+        digestiveConcerns: formData.digestiveConcerns,
+        otherDigestiveConcern: formData.otherDigestiveConcern,
       };
 
       const response = await FoodHabitsPost(data);
@@ -566,6 +600,99 @@ function FoodHabits() {
               />
             </div>
           </section>
+
+          {/* Digestive Concerns */}
+
+          <section className="food-section">
+            <div className="food-section-heading">
+              <h2>How is your digestive health?</h2>
+              <span>Select any</span>
+            </div>
+
+            <p className="food-section-description">
+              Tell us about any digestive issues you experience so we can create
+              a nutrition plan that suits your needs.
+            </p>
+
+            <div className="food-chip-list">
+              {digestiveOptions.map((concern) => (
+                <label
+                  key={concern}
+                  className={`food-chip ${
+                    formData.digestiveConcerns.includes(concern)
+                      ? "selected"
+                      : ""
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={formData.digestiveConcerns.includes(concern)}
+                    onChange={() => {
+                      setFormData((previous) => {
+                        const current = previous.digestiveConcerns;
+
+                        if (concern === "Normal / No Issues") {
+                          return {
+                            ...previous,
+                            digestiveConcerns: current.includes(concern)
+                              ? []
+                              : ["Normal / No Issues"],
+                            otherDigestiveConcern: "",
+                          };
+                        }
+
+                        const filtered = current.filter(
+                          (item) => item !== "Normal / No Issues",
+                        );
+
+                        const updated = filtered.includes(concern)
+                          ? filtered.filter((item) => item !== concern)
+                          : [...filtered, concern];
+
+                        return {
+                          ...previous,
+                          digestiveConcerns: updated,
+                          otherDigestiveConcern: updated.includes("Other")
+                            ? previous.otherDigestiveConcern
+                            : "",
+                        };
+                      });
+                    }}
+                  />
+
+                  <i
+                    className={
+                      formData.digestiveConcerns.includes(concern)
+                        ? "bi bi-check-circle-fill"
+                        : "bi bi-plus-circle"
+                    }
+                  ></i>
+
+                  <span>{concern}</span>
+                </label>
+              ))}
+            </div>
+          </section>
+
+          {/* Other Digestive Concern */}
+
+          {formData.digestiveConcerns.includes("Other") && (
+            <div className="food-field food-other-field">
+              <label htmlFor="otherDigestiveConcern">
+                Please specify your digestive concern
+                <span>Required</span>
+              </label>
+
+              <input
+                type="text"
+                id="otherDigestiveConcern"
+                name="otherDigestiveConcern"
+                value={formData.otherDigestiveConcern}
+                onChange={handleChange}
+                placeholder="Describe your digestive concern..."
+              />
+            </div>
+          )}
 
           {error && (
             <div className="food-error" role="alert">

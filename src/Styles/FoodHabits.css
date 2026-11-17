@@ -877,6 +877,154 @@
   box-shadow: 0 0 0 3px rgba(114, 155, 112, 0.12);
 }
 
+
+
+/* Digestive Concerns */
+
+.food-section-description {
+  color: #858b83;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 8px 0 18px;
+}
+
+.food-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.food-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 16px;
+  border: 1px solid #e4e9e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #555e54;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.food-chip input {
+  display: none;
+}
+
+.food-chip i {
+  font-size: 15px;
+  color: #a5ada1;
+  transition: all 0.25s ease;
+}
+
+.food-chip:hover {
+  border-color: #9bae91;
+  background: #f7faf5;
+}
+
+.food-chip.selected {
+  background: #edf4e9;
+  border-color: #829b75;
+  color: #40583b;
+}
+
+.food-chip.selected i {
+  color: #66865b;
+}
+
+/* Other Concern Input */
+
+.food-other-field {
+  margin-top: 18px;
+  padding: 20px;
+  background: #f8faf6;
+  border: 1px solid #e5ebdf;
+  border-radius: 12px;
+  animation: digestiveFade 0.3s ease;
+}
+
+.food-other-field label,
+.food-field label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #394438;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.food-other-field label span,
+.food-field label span {
+  color: #899184;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.food-other-field input,
+.food-field input,
+.food-field select {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #dfe6da;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #394438;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.food-other-field input:focus,
+.food-field input:focus,
+.food-field select:focus {
+  border-color: #829b75;
+  box-shadow: 0 0 0 3px rgba(130, 155, 117, 0.12);
+}
+
+/* Digestive Duration */
+
+.food-field select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* Animation */
+
+@keyframes digestiveFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .food-chip-list {
+    gap: 8px;
+  }
+
+  .food-chip {
+    padding: 10px 12px;
+    font-size: 12px;
+    gap: 7px;
+  }
+
+  .food-other-field {
+    padding: 15px;
+  }
+}
+
+
 @keyframes otherFieldAppear {
   from {
     opacity: 0;
