@@ -18,6 +18,9 @@ function ClientFoodHabitsPage() {
 
       const data = await response.json();
 
+      console.log(data);
+      
+
       if (response.ok) {
         setDetails(data.data);
       }
@@ -249,6 +252,16 @@ function ClientFoodHabitsPage() {
               <h3 className="client-food-notes">
                 {details.additionalNotes || "No additional notes"}
               </h3>
+            </div>
+
+             <div>
+              <span>digestive Concerns</span>
+              {details.digestiveConcerns.map((sends)=>
+              <h3 className="client-food-notes">
+                
+                
+              </h3>
+              )}
             </div>
           </div>
         </div>
