@@ -1048,11 +1048,9 @@
 
 /* Question Label */
 .urination-card label {
-  display: block;
-  margin-bottom: 12px;
-  color: #354b38;
-  font-size: 14px;
+ font-size: 14px;
   font-weight: 600;
+  color: #344b3b;
 }
 
 /* Select Input */

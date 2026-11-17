@@ -226,7 +226,7 @@ function Lifestyle() {
         gender:formData.gender,
         periodDuration:formData.periodDuration,
 
-        urinationFrequency:urinationFrequency
+        urinationFrequency:formData.urinationFrequency
       };
 
       const response = await LifeStylePost(data);
@@ -741,7 +741,8 @@ function Lifestyle() {
     <small>Enter the usual number of days your period lasts.</small>
   </div>
 )}
-<br /><br />
+
+<br /> <br />
 
 
 
@@ -750,7 +751,7 @@ function Lifestyle() {
 
 <div className="urination-section">
 
-  <div className="dailyBudgetDiv">
+  <div className="urination-card">
     <label>How frequently do you urinate during the day?</label>
     <select
   name="urinationFrequency"
