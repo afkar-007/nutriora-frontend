@@ -202,7 +202,7 @@ function ClientFoodHabitsPage() {
 
             <div>
               <span>other Cuisines </span>
-              <h3>{details.otherCuisines || "Not provided"}</h3>
+              <h3>{details.otherCuisine || "Not provided"}</h3>
             </div>
           </div>
 
