@@ -261,7 +261,7 @@ function ClientFoodHabitsPage() {
               <span>other Digestive Concerns</span>
 
               <h3 className="client-food-notes">
-                {details.otherDigestiveConcerns || "Not provided"}
+                {details.otherDigestiveConcern || "Not provided"}
               </h3>
 
               
