@@ -201,7 +201,7 @@ function ClientFoodHabitsPage() {
             </div>
 
             <div>
-              <span>Meals Per Day</span>
+              <span>other Cuisines </span>
               <h3>{details.otherCuisines || "Not provided"}</h3>
             </div>
           </div>
