@@ -4,6 +4,8 @@ import BodyMeasurementPost from "../Services/serBodyMeasurement";
 import {  useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
+import paws from '../assets/paws.gif'
+
 function BodyMeasurements() {
   const navigate = useNavigate()
 
@@ -122,6 +124,25 @@ function BodyMeasurements() {
         (Number(formData.height) / 100) ** 2
       ).toFixed(1)
       : null;
+
+
+           if (loading) {
+          return (
+            <div className="body-profile-status">
+              <img
+                src={paws}
+                alt="Loading..."
+                className="profile-loading-gif"
+              />
+              <h3>Loading </h3>
+              <p></p>
+            </div>
+          );
+        }
+
+
+
+
 
   return (
     <main className="body-page">

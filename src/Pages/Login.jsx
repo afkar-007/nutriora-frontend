@@ -4,6 +4,8 @@ import "../Styles/Login.css";
 import LoginUser from "../Services/Login";
 import { useNavigate } from "react-router-dom";
 
+import paws from '../assets/paws.gif'
+
 
 function Login() {
   const navigate = useNavigate()
@@ -145,6 +147,21 @@ function Login() {
       setLoading(false)
     }
   }
+
+
+     if (loading) {
+      return (
+        <div className="body-profile-status">
+          <img
+            src={paws}
+            alt="Loading..."
+            className="profile-loading-gif"
+          />
+          <h3>Loading </h3>
+          <p></p>
+        </div>
+      );
+    }
 
   return (
     <main className="auth-page">

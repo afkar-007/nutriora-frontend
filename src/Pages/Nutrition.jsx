@@ -3,6 +3,8 @@ import "../Styles/Nutrition.css";
 import { useNavigate } from "react-router-dom";
 import LoadingGif from "../assets/LoadingNutoria.gif";
 
+
+
 function Nutrition() {
   const navigate = useNavigate();
   const [plan, setPlan] = useState(null);
@@ -139,6 +141,8 @@ function Nutrition() {
   }
 
   const day = plan.days?.[selectedDay];
+
+
 
   return (
     <>

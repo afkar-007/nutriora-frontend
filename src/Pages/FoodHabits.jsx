@@ -4,6 +4,8 @@ import "../Styles/FoodHabits.css";
 import { useEffect } from "react";
 import FoodHabitsPost from "../Services/serFoodHabits";
 
+import paws from '../assets/paws.gif'
+
 function FoodHabits() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -243,6 +245,21 @@ function FoodHabits() {
       setLoading(false);
     }
   }
+
+    if (loading) {
+            return (
+              <div className="body-profile-status">
+                <img
+                  src={paws}
+                  alt="Loading..."
+                  className="profile-loading-gif"
+                />
+                <h3>Loading </h3>
+                <p></p>
+              </div>
+            );
+          }
+  
 
   return (
     <main className="food-page">

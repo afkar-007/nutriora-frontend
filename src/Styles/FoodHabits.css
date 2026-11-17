@@ -992,6 +992,143 @@
   appearance: auto;
 }
 
+
+.body-profile-status {
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 35px 24px;
+  text-align: center;
+  background: #fffef9;
+  border: 1px solid #e5e9df;
+  border-radius: 22px;
+  min-height: 100vh;
+}
+
+.profile-loading-gif {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.body-profile-status > i {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  color: #628067;
+  background: #edf3e9;
+  border-radius: 20px;
+  font-size: 28px;
+}
+
+.body-profile-status h3 {
+  margin: 8px 0;
+  color: #304334;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.body-profile-status p {
+  max-width: 400px;
+  margin: 5px 0 15px;
+  color: #81897e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.body-profile-status button {
+  padding: 11px 22px;
+  color: #ffffff;
+  background: #58765e;
+  border: 1px solid #58765e;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.body-profile-status button:hover {
+  background: #3f5d46;
+}
+
+.body-profile-status {
+  display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 35px 24px;
+  text-align: center;
+  background: #fffef9;
+  border: 1px solid #e5e9df;
+  border-radius: 22px;
+  min-height: 100vh;
+}
+
+.profile-loading-gif {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  object-fit: contain;
+}
+
+.body-profile-status > i {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+  color: #628067;
+  background: #edf3e9;
+  border-radius: 20px;
+  font-size: 28px;
+}
+
+.body-profile-status h3 {
+  margin: 8px 0;
+  color: #304334;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.body-profile-status p {
+  max-width: 400px;
+  margin: 5px 0 15px;
+  color: #81897e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.body-profile-status button {
+  padding: 11px 22px;
+  color: #ffffff;
+  background: #58765e;
+  border: 1px solid #58765e;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.body-profile-status button:hover {
+  background: #3f5d46;
+}
+
+
+
+
+
 /* Animation */
 
 @keyframes digestiveFade {

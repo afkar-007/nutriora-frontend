@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../AdminStyles/AdminDashboard.css";
 
-import LoadingGif from "../assets/LoadingNutoria.gif";
+import LoadingGif from "../assets/paws.gif";
 
 function AdminDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

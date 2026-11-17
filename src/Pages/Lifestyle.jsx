@@ -4,6 +4,8 @@ import "../Styles/lifestyle.css";
 import LifeStylePost from "../Services/serLifeStyle";
 import { useEffect } from "react";
 
+import paws from '../assets/paws.gif'
+
 function Lifestyle() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -249,6 +251,22 @@ function Lifestyle() {
       setLoading(false);
     }
   }
+
+
+       if (loading) {
+          return (
+            <div className="body-profile-status">
+              <img
+                src={paws}
+                alt="Loading..."
+                className="profile-loading-gif"
+              />
+              <h3>Loading </h3>
+              <p></p>
+            </div>
+          );
+        }
+
 
   return (
     <main className="lifestyle-page">

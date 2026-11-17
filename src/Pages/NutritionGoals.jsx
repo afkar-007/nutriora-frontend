@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Styles/NutritionGoals.css";
 import postNutritionGoals from "../Services/serNutritionGoals";
 
+import paws from '../assets/paws.gif'
 function NutritionGoals() {
   const navigate = useNavigate();
 
@@ -142,6 +143,23 @@ function NutritionGoals() {
       setLoading(false);
     }
   }
+
+       if (loading) {
+          return (
+            <div className="body-profile-status">
+              <img
+                src={paws}
+                alt="Loading..."
+                className="profile-loading-gif"
+              />
+              <h3>Loading </h3>
+              <p></p>
+            </div>
+          );
+        }
+
+
+
 
   return (
     <main className="goals-page">
