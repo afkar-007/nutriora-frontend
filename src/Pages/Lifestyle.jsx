@@ -750,7 +750,7 @@ function Lifestyle() {
 
 <div className="urination-section">
 
-  <div className="urination-card">
+  <div className="dailyBudgetDiv">
     <label>How frequently do you urinate during the day?</label>
     <select
   name="urinationFrequency"
