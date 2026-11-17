@@ -746,7 +746,12 @@ function Lifestyle() {
 
 <label>How frequently do you urinate during the day?</label>
 
-<select
+
+<div className="urination-section">
+
+  <div className="urination-card">
+    <label>How frequently do you urinate during the day?</label>
+    <select
   name="urinationFrequency"
   value={formData.urinationFrequency}
   onChange={handleChange}
@@ -758,6 +763,12 @@ function Lifestyle() {
   <option value="10 or more times">10 or more times</option>
   <option value="Not sure">Not sure</option>
 </select>
+
+  </div>
+
+ 
+
+</div>
 
 
 
