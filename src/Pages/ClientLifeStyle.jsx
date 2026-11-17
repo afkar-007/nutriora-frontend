@@ -65,6 +65,8 @@ function ClientLifestyle() {
       }
 
       setDetails(result.data || null);
+      console.log(result);
+      
     } catch (err) {
       setError(err.message || "Something went wrong.");
     } finally {
@@ -391,6 +393,25 @@ function ClientLifestyle() {
             {showValue(details.eatingRoutine) === "Not provided"
               ? "Eating Routine added."
               : details.eatingRoutine}
+          </p>
+        </div>
+      </section>
+
+
+          <section className="lifestyle-section">
+        <div className="lifestyle-section-heading">
+          <i className="bi bi-journal-text"></i>
+          <div>
+            <h2>afford plan</h2>
+            <p>Other information you shared with your nutritionist</p>
+          </div>
+        </div>
+
+        <div className="lifestyle-notes-card">
+          <p>
+            {showValue(details.afford) === "Not provided"
+              ? "how much you afford for per day."
+              : details.afford}
           </p>
         </div>
       </section>

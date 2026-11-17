@@ -13,6 +13,8 @@ function FoodHabits() {
     mealsPerDay: "",
     foodAllergies: [],
     dislikedFoods: "",
+    otherAllergy: "",
+    otherCuisine: "",
     favoriteCuisines: [],
     eatingHabits: "",
     cookingPreference: "",
@@ -166,6 +168,11 @@ function FoodHabits() {
         return;
       }
 
+      if(formData.eatingHabits===""){
+        setError("Tell us about your eating habits")
+        return
+      }
+
       
       const id = localStorage.getItem("id");
 
@@ -175,8 +182,10 @@ function FoodHabits() {
         mealsPerDay: formData.mealsPerDay,
         foodAllergies: formData.foodAllergies,
         dislikedFoods: formData.dislikedFoods,
+         otherAllergy: formData.otherAllergy,
         favoriteCuisines: formData.favoriteCuisines,
         eatingHabits: formData.eatingHabits,
+         otherCuisine: formData.otherCuisine,
         cookingPreference: formData.cookingPreference,
         additionalNotes: formData.additionalNotes,
       };
@@ -354,6 +363,28 @@ function FoodHabits() {
             </p>
           </section>
 
+
+
+          {/* new */}
+
+          {formData.foodAllergies.includes("Other") && (
+  <div className="food-field food-other-field">
+    <label htmlFor="otherAllergy">
+      Please specify your allergy
+      <span>Required</span>
+    </label>
+
+    <input
+      type="text"
+      id="otherAllergy"
+      name="otherAllergy"
+      value={formData.otherAllergy || ""}
+      onChange={handleChange}
+      placeholder="E.g. Sesame seeds, mustard..."
+    />
+  </div>
+)}
+
           {/* Cuisine Preferences */}
 
           <section className="food-section">
@@ -394,6 +425,27 @@ function FoodHabits() {
             </div>
           </section>
 
+
+          {/* new */}
+
+          {formData.favoriteCuisines.includes("Other") && (
+  <div className="food-field food-other-field">
+    <label htmlFor="otherCuisine">
+      Which other cuisines do you enjoy?
+      <span>Required</span>
+    </label>
+
+    <input
+      type="text"
+      id="otherCuisine"
+      name="otherCuisine"
+      value={formData.otherCuisine || ""}
+      onChange={handleChange}
+      placeholder="E.g. Thai, Korean, Mexican..."
+    />
+  </div>
+)}
+
           {/* Disliked Foods */}
 
           <section className="food-section">
@@ -419,7 +471,7 @@ function FoodHabits() {
           <section className="food-section">
             <div className="food-field">
               <label htmlFor="eatingHabits">
-                Tell us about your eating routine <span>Optional</span>
+                Tell us about your eating habits <span>Mandatory</span>
               </label>
 
               <textarea

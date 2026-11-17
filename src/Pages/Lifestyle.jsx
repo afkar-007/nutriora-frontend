@@ -22,15 +22,17 @@ function Lifestyle() {
     digestiveIssues: "",
     smokingAlcohol: "",
     additionalNotes: "",
-    eatingRoutine:""
+    eatingRoutine: "",
+    otherMedicalCondition: "",
+    afford: "",
   });
 
-  // useEffect(() => {
-  //   const ClientHomeGateWay = localStorage.getItem("ClientHome");
-  //   if (ClientHomeGateWay === "true") {
-  //     navigate("/clientHome");
-  //   }
-  // }, []);
+  useEffect(() => {
+    const ClientHomeGateWay = localStorage.getItem("ClientHome");
+    if (ClientHomeGateWay === "true") {
+      navigate("/clientHome");
+    }
+  }, []);
 
   const [error, setError] = useState("");
 
@@ -134,9 +136,8 @@ function Lifestyle() {
     const getData = await response.json();
     if (!response.ok) {
       alert(getData.message);
-      
-      
-      return
+
+      return;
     }
 
     if (response.ok) {
@@ -156,16 +157,48 @@ function Lifestyle() {
         formData.exerciseFrequency === "" ||
         formData.stressLevel === "" ||
         formData.sleepQuality === "" ||
-        formData.activityLevel === "" ||
-        formData.smokingAlcohol === "" 
+        formData.activityLevel === "" 
+        // formData.smokingAlcohol === ""
       ) {
         setError("Please complete all required fields before continuing.");
         return;
       }
 
-      if(formData.eatingRoutine===""){
-        return setError("Please Enter Eating Routine")
+    
+
+      if (formData.eatingRoutine === "") {
+        return setError("Please Enter Eating Routine");
       }
+
+      if (
+        formData.medicalConditions.includes("Other") &&
+        !formData.otherMedicalCondition.trim()
+      ) {
+        setError("Please describe your other health condition.");
+        return;
+      }
+      if(formData.afford===""){
+
+        setError("please Enter your daily budget.");
+        return
+
+      }
+
+      if(formData.sleepQuality===""){
+
+        setError("please Enter your sleep Quality.");
+        return
+
+      }
+
+        if(formData.smokingAlcohol===""){
+
+        setError("please Enter Smoking or alcohol habits .");
+        return
+
+      }
+
+
 
       console.log("Lifestyle & Health Background:", formData);
       const id = localStorage.getItem("id");
@@ -180,14 +213,14 @@ function Lifestyle() {
         exerciseType: formData.exerciseType,
         activityLevel: formData.activityLevel,
         stressLevel: formData.stressLevel,
-        medicalConditions: formData.medicalConditions,
+        // medicalConditions: formData.medicalConditions,
         digestiveIssues: formData.digestiveIssues,
         smokingAlcohol: formData.smokingAlcohol,
         additionalNotes: formData.additionalNotes,
-        eatingRoutine:formData.eatingRoutine
+        eatingRoutine: formData.eatingRoutine,
+        otherMedicalCondition: formData.otherMedicalCondition,
+        afford:formData.afford
       };
-
-     
 
       const response = await LifeStylePost(data);
 
@@ -197,7 +230,7 @@ function Lifestyle() {
       }
 
       if (response.ok) {
-        profileComplete()
+        profileComplete();
 
         //  alert(response.message);
         localStorage.setItem("ClientHome", true);
@@ -538,6 +571,37 @@ function Lifestyle() {
                 ))}
               </div>
 
+              {/* new  */}
+              {formData.medicalConditions.includes("Other") && (
+                <div className="lifestyle-other-condition">
+                  <div className="lifestyle-other-heading">
+                    <i className="bi bi-info-circle"></i>
+
+                    <div>
+                      <h3>Tell us more about your health</h3>
+                      <p>
+                        Please share the health condition so your nutritionist
+                        can better understand your needs.
+                      </p>
+                    </div>
+                  </div>
+
+                  <label htmlFor="otherMedicalCondition">
+                    What other health condition do you have?
+                  </label>
+
+                  <textarea
+                    id="otherMedicalCondition"
+                    name="otherMedicalCondition"
+                    value={formData.otherMedicalCondition}
+                    onChange={handleChange}
+                    className="lifestyle-textarea"
+                    placeholder="E.g. Asthma, anemia, arthritis or any other health condition..."
+                    rows="3"
+                  />
+                </div>
+              )}
+
               <label
                 className="lifestyle-label lifestyle-top-spacing"
                 htmlFor="medications"
@@ -581,7 +645,7 @@ function Lifestyle() {
                   { value: "neither", label: "Neither" },
                   { value: "occasional", label: "Occasionally" },
                   { value: "regular", label: "Regularly" },
-                  { value: "prefer-not-to-say", label: "Prefer not to say" },
+                  { value: "No", label: "No" },
                 ].map((option) => (
                   <label
                     className={`lifestyle-choice ${
@@ -619,7 +683,20 @@ function Lifestyle() {
                 rows="4"
               />
 
-               <label
+              <div className="dailyBudgetDiv">
+                <label>Daily Food Budget (₹)</label>
+
+                <input
+                  type="number"
+                  name="afford"
+                  value={formData.afford}
+                  onChange={handleChange}
+                  placeholder="Enter your daily budget (e.g. 200)"
+                  min="1"
+                />
+              </div>
+
+              <label
                 className="lifestyle-label lifestyle-top-spacing"
                 htmlFor="eatingRoutine"
               >
@@ -635,8 +712,6 @@ function Lifestyle() {
                 placeholder="Tell About your eating Routine"
                 rows="4"
               />
-
-
             </section>
 
             {error && (
@@ -667,6 +742,7 @@ function Lifestyle() {
               <button
                 type="submit"
                 className="lifestyle-continue-button"
+                disabled={loading}
                 onClick={(e) => {
                   handleSubmit(e);
                 }}

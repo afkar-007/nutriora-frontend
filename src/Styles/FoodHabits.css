@@ -851,6 +851,44 @@
   font-size: 1.1rem;
 }
 
+
+.food-other-field {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f5f8f3;
+  border: 1px solid #dce8d9;
+  border-radius: 14px;
+  animation: otherFieldAppear 0.3s ease;
+}
+
+.food-other-field input {
+  width: 100%;
+  padding: 13px 15px;
+  margin-top: 10px;
+  border: 1px solid #d5dfd2;
+  border-radius: 9px;
+  outline: none;
+  font-size: 14px;
+  background: white;
+}
+
+.food-other-field input:focus {
+  border-color: #729b70;
+  box-shadow: 0 0 0 3px rgba(114, 155, 112, 0.12);
+}
+
+@keyframes otherFieldAppear {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Animations */
 
 @keyframes foodFadeIn {

@@ -268,6 +268,19 @@ function ClientLifestylePage() {
               "No additional notes provided."}
           </p>
         </div>
+        <br />
+
+        <h3 className="lifestyle-section-title">
+          <i className="bi bi-journal-text"></i>
+          Afford per day
+        </h3>
+
+         <div className="lifestyle-notes">
+          <p>
+            {details.afford ||
+              " notes provided."}
+          </p>
+        </div>
       </div>
     </div>
   );
