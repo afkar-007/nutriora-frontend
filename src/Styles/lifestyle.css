@@ -941,6 +941,203 @@
   border-color: #9bb49e;
 }
 
+
+
+
+/* Gender Selection */
+.gender-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.gender-options button {
+  flex: 1;
+  padding: 13px 20px;
+  border: 1px solid #dce5dc;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #47554a;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gender-options button:hover {
+  border-color: #789878;
+  background: #f4f8f2;
+}
+
+.gender-options button.active {
+  background: #e7f0e5;
+  border: 1.5px solid #6d916d;
+  color: #426b48;
+  box-shadow: 0 3px 10px rgba(75, 115, 77, 0.08);
+}
+
+/* Period Duration Card */
+.lifestyle-other-condition {
+  margin-top: 20px;
+  padding: 22px;
+  background: linear-gradient(135deg, #f6faf4, #edf4eb);
+  border: 1px solid #dce9d8;
+  border-radius: 16px;
+  animation: periodSlide 0.4s ease forwards;
+}
+
+.lifestyle-other-condition label {
+  display: block;
+  margin-bottom: 10px;
+  color: #354b38;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lifestyle-other-condition input {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d5e1d2;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #354b38;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.lifestyle-other-condition input:focus {
+  border-color: #789878;
+  box-shadow: 0 0 0 3px rgba(120, 152, 120, 0.12);
+}
+
+.lifestyle-other-condition input::placeholder {
+  color: #a2ada1;
+}
+
+.lifestyle-other-condition small {
+  display: block;
+  margin-top: 9px;
+  color: #849284;
+  font-size: 12px;
+}
+
+
+
+/* Urination Section */
+.urination-section {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 20px;
+}
+
+/* Individual Question Card */
+.urination-card {
+  padding: 22px;
+  background: linear-gradient(135deg, #f7faf5, #edf4eb);
+  border: 1px solid #dce8d9;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.urination-card:hover {
+  border-color: #a8c2a3;
+  box-shadow: 0 5px 18px rgba(75, 115, 77, 0.07);
+}
+
+/* Question Label */
+.urination-card label {
+  display: block;
+  margin-bottom: 12px;
+  color: #354b38;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Select Input */
+.urination-card select {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d5e1d2;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #455647;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.urination-card select:focus {
+  border-color: #789878;
+  box-shadow: 0 0 0 3px rgba(120, 152, 120, 0.12);
+}
+
+.urination-card select option {
+  color: #354b38;
+  padding: 10px;
+}
+
+/* Helper Text */
+.urination-card small {
+  display: block;
+  margin-top: 9px;
+  color: #849284;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .urination-section {
+    gap: 15px;
+  }
+
+  .urination-card {
+    padding: 17px;
+    border-radius: 13px;
+  }
+
+  .urination-card label {
+    font-size: 13px;
+  }
+
+  .urination-card select {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Animation */
+@keyframes periodSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .gender-options {
+    gap: 10px;
+  }
+
+  .gender-options button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .lifestyle-other-condition {
+    padding: 17px;
+  }
+}
+
 /* =====================================================
    TABLET RESPONSIVE
 ===================================================== */

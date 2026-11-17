@@ -19,6 +19,8 @@ function FoodHabits() {
     eatingHabits: "",
     cookingPreference: "",
     additionalNotes: "",
+
+    
   });
 
   useEffect(() => {
@@ -154,7 +156,7 @@ function FoodHabits() {
       }
 
       if (!formData.cookingPreference) {
-        setError("Please select your usual food preparation preference.");
+        setError("Please select How do you usually get your meals?.");
         return;
       }
 
@@ -168,12 +170,11 @@ function FoodHabits() {
         return;
       }
 
-      if(formData.eatingHabits===""){
-        setError("Tell us about your eating habits")
-        return
-      }
+      // if(formData.eatingHabits===""){
+      //   setError("Tell us about your eating habits")
+      //   return
+      // }
 
-      
       const id = localStorage.getItem("id");
 
       const data = {
@@ -182,15 +183,13 @@ function FoodHabits() {
         mealsPerDay: formData.mealsPerDay,
         foodAllergies: formData.foodAllergies,
         dislikedFoods: formData.dislikedFoods,
-         otherAllergy: formData.otherAllergy,
+        otherAllergy: formData.otherAllergy,
         favoriteCuisines: formData.favoriteCuisines,
         eatingHabits: formData.eatingHabits,
-         otherCuisine: formData.otherCuisine,
+        otherCuisine: formData.otherCuisine,
         cookingPreference: formData.cookingPreference,
         additionalNotes: formData.additionalNotes,
       };
-
-    
 
       const response = await FoodHabitsPost(data);
       if (!response.ok) {
@@ -363,27 +362,25 @@ function FoodHabits() {
             </p>
           </section>
 
-
-
           {/* new */}
 
           {formData.foodAllergies.includes("Other") && (
-  <div className="food-field food-other-field">
-    <label htmlFor="otherAllergy">
-      Please specify your allergy
-      <span>Required</span>
-    </label>
+            <div className="food-field food-other-field">
+              <label htmlFor="otherAllergy">
+                Please specify your allergy
+                <span>Required</span>
+              </label>
 
-    <input
-      type="text"
-      id="otherAllergy"
-      name="otherAllergy"
-      value={formData.otherAllergy || ""}
-      onChange={handleChange}
-      placeholder="E.g. Sesame seeds, mustard..."
-    />
-  </div>
-)}
+              <input
+                type="text"
+                id="otherAllergy"
+                name="otherAllergy"
+                value={formData.otherAllergy || ""}
+                onChange={handleChange}
+                placeholder="E.g. Sesame seeds, mustard..."
+              />
+            </div>
+          )}
 
           {/* Cuisine Preferences */}
 
@@ -425,26 +422,25 @@ function FoodHabits() {
             </div>
           </section>
 
-
           {/* new */}
 
           {formData.favoriteCuisines.includes("Other") && (
-  <div className="food-field food-other-field">
-    <label htmlFor="otherCuisine">
-      Which other cuisines do you enjoy?
-      <span>Required</span>
-    </label>
+            <div className="food-field food-other-field">
+              <label htmlFor="otherCuisine">
+                Which other cuisines do you enjoy?
+                <span>Required</span>
+              </label>
 
-    <input
-      type="text"
-      id="otherCuisine"
-      name="otherCuisine"
-      value={formData.otherCuisine || ""}
-      onChange={handleChange}
-      placeholder="E.g. Thai, Korean, Mexican..."
-    />
-  </div>
-)}
+              <input
+                type="text"
+                id="otherCuisine"
+                name="otherCuisine"
+                value={formData.otherCuisine || ""}
+                onChange={handleChange}
+                placeholder="E.g. Thai, Korean, Mexican..."
+              />
+            </div>
+          )}
 
           {/* Disliked Foods */}
 
@@ -471,7 +467,7 @@ function FoodHabits() {
           <section className="food-section">
             <div className="food-field">
               <label htmlFor="eatingHabits">
-                Tell us about your eating habits <span>Mandatory</span>
+                Tell us about your eating habits
               </label>
 
               <textarea
@@ -512,6 +508,12 @@ function FoodHabits() {
                   icon: "bi-shop",
                   title: "Mostly outside",
                   description: "Restaurants or ordered meals",
+                },
+                {
+                  value: "Hosteller",
+                  icon: "bi-building",
+                  title: "Hosteller",
+                  description: "Hostel food",
                 },
               ].map((option) => (
                 <label

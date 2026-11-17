@@ -270,6 +270,48 @@ function ClientLifestylePage() {
         </div>
         <br />
 
+             <h3 className="lifestyle-section-title">
+          <i className="bi bi-journal-text"></i>
+          gender
+        </h3>
+        <div className="lifestyle-notes">
+          <p>
+            {details.gender ||
+              "Not provided."}
+          </p>
+        </div>
+        <br />
+
+           <h3 className="lifestyle-section-title">
+          <i className="bi bi-journal-text"></i>
+          Period Duration
+        </h3>
+        <div className="lifestyle-notes">
+          <p>
+            {details.periodDuration ||
+              "No need."}
+          </p>
+        </div>
+        <br />
+        
+
+
+
+             <h3 className="lifestyle-section-title">
+          <i className="bi bi-journal-text"></i>
+          urination Frequency
+        </h3>
+        <div className="lifestyle-notes">
+          <p>
+            {details.urinationFrequency ||
+              "not provided."}
+          </p>
+        </div>
+        <br />
+
+
+
+
         <h3 className="lifestyle-section-title">
           <i className="bi bi-journal-text"></i>
           Afford per day

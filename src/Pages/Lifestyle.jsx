@@ -25,6 +25,11 @@ function Lifestyle() {
     eatingRoutine: "",
     otherMedicalCondition: "",
     afford: "",
+
+    gender: "",
+    periodDuration: "",
+
+    urinationFrequency:""
   });
 
   useEffect(() => {
@@ -157,14 +162,12 @@ function Lifestyle() {
         formData.exerciseFrequency === "" ||
         formData.stressLevel === "" ||
         formData.sleepQuality === "" ||
-        formData.activityLevel === "" 
+        formData.activityLevel === ""
         // formData.smokingAlcohol === ""
       ) {
         setError("Please complete all required fields before continuing.");
         return;
       }
-
-    
 
       if (formData.eatingRoutine === "") {
         return setError("Please Enter Eating Routine");
@@ -177,28 +180,27 @@ function Lifestyle() {
         setError("Please describe your other health condition.");
         return;
       }
-      if(formData.afford===""){
-
+      if (formData.afford === "") {
         setError("please Enter your daily budget.");
-        return
-
+        return;
       }
 
-      if(formData.sleepQuality===""){
-
+      if (formData.sleepQuality === "") {
         setError("please Enter your sleep Quality.");
-        return
-
+        return;
       }
 
-        if(formData.smokingAlcohol===""){
-
+      if (formData.smokingAlcohol === "") {
         setError("please Enter Smoking or alcohol habits .");
-        return
-
+        return;
       }
 
+      if(formData.urinationFrequency===""){
 
+         setError("please Enter about your urination Frequency .");
+        return;
+
+      }
 
       console.log("Lifestyle & Health Background:", formData);
       const id = localStorage.getItem("id");
@@ -219,7 +221,12 @@ function Lifestyle() {
         additionalNotes: formData.additionalNotes,
         eatingRoutine: formData.eatingRoutine,
         otherMedicalCondition: formData.otherMedicalCondition,
-        afford:formData.afford
+        afford: formData.afford,
+
+        gender:formData.gender,
+        periodDuration:formData.periodDuration,
+
+        urinationFrequency:urinationFrequency
       };
 
       const response = await LifeStylePost(data);
@@ -683,6 +690,77 @@ function Lifestyle() {
                 rows="4"
               />
 
+
+                <label
+                className="lifestyle-label lifestyle-top-spacing"
+                htmlFor=""
+              >
+               Period Cycle
+              </label>
+
+                
+                <div className="gender-options">
+  <button
+    type="button"
+    className={formData.gender === "Male" ? "active" : ""}
+    onClick={() =>
+      setFormData({ ...formData, gender: "Male", periodDuration: "" })
+    }
+  >
+    Male
+  </button>
+
+  <button
+    type="button"
+    className={formData.gender === "Female" ? "active" : ""}
+    onClick={() =>
+      setFormData({ ...formData, gender: "Female" })
+    }
+  >
+    Female
+  </button>
+</div>
+
+
+{formData.gender === "Female" && (
+  <div className="lifestyle-other-condition">
+    <label htmlFor="periodDuration">
+      How many days does your menstrual period usually last?
+    </label>
+
+    <input
+      type="number"
+      id="periodDuration"
+      name="periodDuration"
+      value={formData.periodDuration}
+      onChange={handleChange}
+      placeholder="Enter number of days (e.g. 5)"
+      min="1"
+      max="15"
+    />
+    <small>Enter the usual number of days your period lasts.</small>
+  </div>
+)}
+
+
+
+<label>How frequently do you urinate during the day?</label>
+
+<select
+  name="urinationFrequency"
+  value={formData.urinationFrequency}
+  onChange={handleChange}
+>
+  <option value="">Select frequency</option>
+  <option value="1-3 times">1–3 times</option>
+  <option value="4-6 times">4–6 times</option>
+  <option value="7-9 times">7–9 times</option>
+  <option value="10 or more times">10 or more times</option>
+  <option value="Not sure">Not sure</option>
+</select>
+
+
+
               <div className="dailyBudgetDiv">
                 <label>Daily Food Budget (₹)</label>
 
@@ -702,8 +780,8 @@ function Lifestyle() {
               >
                 Tell About Your Eating Routine
               </label>
-                
-                 <textarea
+
+              <textarea
                 id="eatingRoutine"
                 name="eatingRoutine"
                 value={formData.eatingRoutine}
